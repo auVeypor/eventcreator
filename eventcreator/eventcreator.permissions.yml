@@ -1,0 +1,57 @@
+add event entities:
+  title: 'Create new Event entities'
+
+administer event entities:
+  title: 'Administer Event entities'
+  description: 'Allow to access the administration form to configure Event entities.'
+  restrict access: true
+
+delete event entities:
+  title: 'Delete Event entities'
+
+edit event entities:
+  title: 'Edit Event entities'
+
+view published event entities:
+  title: 'View published Event entities'
+
+view unpublished event entities:
+  title: 'View unpublished Event entities'
+add volunteer event entities:
+  title: 'Create new Volunteer event entities'
+
+administer volunteer event entities:
+  title: 'Administer Volunteer event entities'
+  description: 'Allow to access the administration form to configure Volunteer event entities.'
+  restrict access: true
+
+delete volunteer event entities:
+  title: 'Delete Volunteer event entities'
+
+edit volunteer event entities:
+  title: 'Edit Volunteer event entities'
+
+view published volunteer event entities:
+  title: 'View published Volunteer event entities'
+
+view unpublished volunteer event entities:
+  title: 'View unpublished Volunteer event entities'
+add attendee event entities:
+  title: 'Create new Attendee event entities'
+
+administer attendee event entities:
+  title: 'Administer Attendee event entities'
+  description: 'Allow to access the administration form to configure Attendee event entities.'
+  restrict access: true
+
+delete attendee event entities:
+  title: 'Delete Attendee event entities'
+
+edit attendee event entities:
+  title: 'Edit Attendee event entities'
+
+view published attendee event entities:
+  title: 'View published Attendee event entities'
+
+view unpublished attendee event entities:
+  title: 'View unpublished Attendee event entities'

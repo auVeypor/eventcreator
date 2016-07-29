@@ -1,0 +1,44 @@
+# Event menu items definition
+entity.event.collection:
+  title: 'Event list'
+  route_name: entity.event.collection
+  description: 'List Event entities'
+  parent: system.admin_structure
+  weight: 98
+
+event.admin.structure.settings:
+  title: Event settings
+  description: 'Configure Event entities'
+  route_name: event.settings
+  parent: system.admin_structure
+  weight: 101
+
+# Volunteer event menu items definition
+entity.volunteer_event.collection:
+  title: 'Volunteer event list'
+  route_name: entity.volunteer_event.collection
+  description: 'List Volunteer event entities'
+  parent: system.admin_structure
+  weight: 99
+
+volunteer_event.admin.structure.settings:
+  title: Volunteer event settings
+  description: 'Configure Volunteer event entities'
+  route_name: volunteer_event.settings
+  parent: system.admin_structure
+  weight: 102
+
+# Attendee event menu items definition
+entity.attendee_event.collection:
+  title: 'Attendee event list'
+  route_name: entity.attendee_event.collection
+  description: 'List Attendee event entities'
+  parent: system.admin_structure
+  weight: 100
+
+attendee_event.admin.structure.settings:
+  title: Attendee event settings
+  description: 'Configure Attendee event entities'
+  route_name: attendee_event.settings
+  parent: system.admin_structure
+  weight: 103

@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.field.node.event_1.field_date_vol
+        - field.field.node.event_1.field_description_vol
+        - field.field.node.event_1.field_status_vol
+        - field.field.node.event_1.field_venue_vol
+        - field.field.node.event_1.rng_capacity
+        - field.field.node.event_1.rng_registrants_duplicate
+        - field.field.node.event_1.rng_registration_groups
+        - field.field.node.event_1.rng_registration_type
+        - field.field.node.event_1.rng_reply_to
+        - field.field.node.event_1.rng_status
+        - node.type.event_1
+    module:
+        - datetime
+        - text
+        - user
+id: node.event_1.default
+targetEntityType: node
+bundle: event_1
+mode: default
+content:
+    field_date_vol:
+        weight: 101
+        label: above
+        settings:
+            format_type: medium
+            timezone_override: ''
+        third_party_settings: {  }
+        type: datetime_default
+    field_description_vol:
+        weight: 102
+        label: above
+        settings: {  }
+        third_party_settings: {  }
+        type: text_default
+    field_status_vol:
+        weight: 104
+        label: above
+        settings:
+            thousand_separator: ''
+            prefix_suffix: true
+        third_party_settings: {  }
+        type: number_integer
+    field_venue_vol:
+        weight: 103
+        label: above
+        settings:
+            link_to_entity: false
+        third_party_settings: {  }
+        type: string
+    links:
+        weight: 100
+hidden:
+    rng_capacity: true
+    rng_registrants_duplicate: true
+    rng_registration_groups: true
+    rng_registration_type: true
+    rng_reply_to: true
+    rng_status: true
