@@ -42,11 +42,17 @@ class EventCreateForm extends FormBase {
         '#required' => TRUE,
 	);
 
-	$form['event-date'] = array(
+	$form['event-date-vol'] = array(
 		'#type' => 'datetime',
-		'#title' => $this->t('Date'),
+		'#title' => $this->t('Volunteer Date'),
         '#required' => TRUE,
 	);
+
+  $form['event-date-att'] = array(
+    '#type' => 'datetime',
+    '#title' => $this->t('Attendee Date'),
+        '#required' => TRUE,
+  );
 
 	$form['event-venue'] = array(
 		'#type' => 'textfield',
@@ -87,11 +93,13 @@ class EventCreateForm extends FormBase {
   	$event_name = $form_state->getValue('event-name');
   	$event_description = $form_state->getValue('event-description');
   	$event_venue = $form_state->getValue('event-venue');
-  	$event_date = $form_state->getValue('event-date');
+    $event_date_vol = $form_state->getValue('event-date-att');
+  	$event_date_date = $form_state->getValue('event-date-vol');
     $event_status = $form_state->getValue('event-status');
 
-    //split the date to array. Original format: "yyyy-mm-dd hh:mm:ss Australia/Sydney"
-    $datelist = explode(" ", $event_date);
+    //split the date to array. Original format: "yyyy-mm-dd hh:mm:ss Country/City"
+    $date_list_vol = explode(" ", $event_date_vol);
+    $date_list_att = explode(" ", $event_date_att);
 //    \Drupal::logger('eventcreator')->error($datelist[0].' _ '.$datelist[1]);
 
   	// Save the parent event
@@ -101,34 +109,36 @@ class EventCreateForm extends FormBase {
   		'field_description' => $event_description,
   		'field_venue' => $event_venue,
   		//'field_date' => $date,
-          'field_status' => $event_status
+      'field_status' => $event_status
   	]);
   	$parent_event->save();
 
   	// Now for the two sub events
   	$att = Node::create(array(
-      	'type' => 'event',
-      	'title' => 'att ' . $event_name,
+      	'type' => 'attendeeevent',
+      	'title' => $event_name.' Attendee',
       	'langcode' => 'en',
-      	'uid' => '1',
-      	//'field_date2' => $date_short[0],
-      	'field_description' => $event_description,
-      	'field_venue' => $event_venue,
-      	'field_status' => $event_status,
+        'uid' => '1',
+        'field_original_date' => $event_date_att,
+        'field_text_date' => $date_list_att[0],
+        'field_text_time' => $date_list_att[1],
+        'field_description' => $event_description,
+        'field_venue' => $event_venue,
+        'field_status' => $event_status,
   	));
   	$att->save();
 
   	$vol = Node::create(array(
-      	'type' => 'event_1',
-      	'title' => 'vol ' . $event_name,
+      	'type' => 'volunteerevent',
+      	'title' => $event_name.' Volunteer',
       	'langcode' => 'en',
       	'uid' => '1',
-        'field_original_date' => $event_date,
-        'field_text_date' => $datelist[0],
-        'field_text_time' => $datelist[1],
-      	'field_description_vol' => $event_description,
-      	'field_venue_vol' => $event_venue,
-      	'field_status_vol' => $event_status,
+        'field_original_date' => $event_date_vol,
+        'field_text_date' => $date_list_vol[0],
+        'field_text_time' => $date_list_vol[1],
+      	'field_description' => $event_description,
+      	'field_venue' => $event_venue,
+      	'field_status' => $event_status,
   	));
   	$vol->save();
 
