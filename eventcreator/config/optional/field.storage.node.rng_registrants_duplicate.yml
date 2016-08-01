@@ -1,8 +1,9 @@
+uuid: a616029a-5eff-40e0-9a0e-4fc19bebd75a
 langcode: en
 status: true
 dependencies:
-    module:
-        - node
+  module:
+    - node
 id: node.rng_registrants_duplicate
 field_name: rng_registrants_duplicate
 entity_type: node

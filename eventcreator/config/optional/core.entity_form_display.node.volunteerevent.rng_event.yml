@@ -1,0 +1,65 @@
+uuid: 63825143-f133-4c83-a486-8e484b29ada6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.rng_event
+    - field.field.node.volunteerevent.rng_capacity
+    - field.field.node.volunteerevent.rng_registrants_duplicate
+    - field.field.node.volunteerevent.rng_registration_groups
+    - field.field.node.volunteerevent.rng_registration_type
+    - field.field.node.volunteerevent.rng_reply_to
+    - field.field.node.volunteerevent.rng_status
+    - node.type.volunteerevent
+  module:
+    - rng
+    - unlimited_number
+id: node.volunteerevent.rng_event
+targetEntityType: node
+bundle: volunteerevent
+mode: rng_event
+content:
+  rng_capacity:
+    type: unlimited_number
+    weight: 2
+    settings:
+      label_unlimited: Unlimited
+      label_number: Limited
+      placeholder: ''
+    third_party_settings: {  }
+  rng_registrants_duplicate:
+    type: boolean_checkbox
+    weight: 1
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  rng_registration_groups:
+    type: rng_registration_group
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  rng_registration_type:
+    type: rng_registration_type
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+  rng_reply_to:
+    type: email_default
+    settings:
+      placeholder: 'Leave empty to use site default.'
+      size: 60
+    weight: 3
+    third_party_settings: {  }
+  rng_status:
+    type: boolean_checkbox
+    weight: 0
+    settings:
+      display_label: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  title: true
+  uid: true

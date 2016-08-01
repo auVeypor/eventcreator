@@ -1,0 +1,19 @@
+uuid: 5d52b448-d7b1-4f18-b468-d402c62abc6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_original_date
+    - node.type.attendeeevent
+id: node.attendeeevent.field_original_date
+field_name: field_original_date
+entity_type: node
+bundle: attendeeevent
+label: 'Original Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,73 @@
+uuid: f171c096-4ae2-4d53-9ab1-02e547bb5284
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.volunteerevent.field_description
+    - field.field.node.volunteerevent.field_original_date
+    - field.field.node.volunteerevent.field_status
+    - field.field.node.volunteerevent.field_text_date
+    - field.field.node.volunteerevent.field_text_time
+    - field.field.node.volunteerevent.field_venue
+    - field.field.node.volunteerevent.rng_capacity
+    - field.field.node.volunteerevent.rng_registrants_duplicate
+    - field.field.node.volunteerevent.rng_registration_groups
+    - field.field.node.volunteerevent.rng_registration_type
+    - field.field.node.volunteerevent.rng_reply_to
+    - field.field.node.volunteerevent.rng_status
+    - node.type.volunteerevent
+  module:
+    - text
+    - user
+id: node.volunteerevent.default
+targetEntityType: node
+bundle: volunteerevent
+mode: default
+content:
+  field_description:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_status:
+    weight: 103
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_text_date:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_text_time:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_venue:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_original_date: true
+  rng_capacity: true
+  rng_registrants_duplicate: true
+  rng_registration_groups: true
+  rng_registration_type: true
+  rng_reply_to: true
+  rng_status: true

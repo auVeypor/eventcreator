@@ -1,7 +1,7 @@
 {
   "name": "drupal/eventcreator",
   "type": "drupal-module",
-  "description": "My Awesome Module",
+  "description": "Event Management Module",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
   "homepage": "https://www.drupal.org/project/eventcreator",

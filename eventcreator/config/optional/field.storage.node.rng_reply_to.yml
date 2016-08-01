@@ -1,8 +1,9 @@
+uuid: 7f292960-7054-4ffb-a222-19845273848b
 langcode: en
 status: true
 dependencies:
-    module:
-        - node
+  module:
+    - node
 id: node.rng_reply_to
 field_name: rng_reply_to
 entity_type: node

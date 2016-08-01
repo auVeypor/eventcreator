@@ -1,0 +1,19 @@
+uuid: d5a21da0-d207-45a7-ae9f-81a7f91bc471
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_original_date
+    - node.type.volunteerevent
+id: node.volunteerevent.field_original_date
+field_name: field_original_date
+entity_type: node
+bundle: volunteerevent
+label: 'Original Date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

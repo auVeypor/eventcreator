@@ -1,13 +1,14 @@
+uuid: b53fb795-c446-4cf6-8bd7-e83368d4ad9c
 langcode: en
 status: true
 dependencies:
-    config:
-        - field.storage.node.rng_registrants_duplicate
-        - node.type.event_1
-id: node.event_1.rng_registrants_duplicate
+  config:
+    - field.storage.node.rng_registrants_duplicate
+    - node.type.attendeeevent
+id: node.attendeeevent.rng_registrants_duplicate
 field_name: rng_registrants_duplicate
 entity_type: node
-bundle: event_1
+bundle: attendeeevent
 label: 'Allow duplicate registrants'
 description: 'Allows a registrant to create more than one registration for this event.'
 required: false
@@ -15,6 +16,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-    on_label: 'Allow duplicate registrants for this event'
-    off_label: 'Do not allow duplicate registrants for this event'
+  on_label: 'Allow duplicate registrants for this event'
+  off_label: 'Do not allow duplicate registrants for this event'
 field_type: boolean

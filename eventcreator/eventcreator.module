@@ -16,7 +16,7 @@ function eventcreator_help($route_name, RouteMatchInterface $route_match) {
     case 'help.page.eventcreator':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('My Awesome Module') . '</p>';
+      $output .= '<p>' . t('Event Management Module') . '</p>';
       return $output;
 
     default:

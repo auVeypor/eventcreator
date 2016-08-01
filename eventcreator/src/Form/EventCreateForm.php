@@ -48,11 +48,11 @@ class EventCreateForm extends FormBase {
         '#required' => TRUE,
 	);
 
-  $form['event-date-att'] = array(
-    '#type' => 'datetime',
-    '#title' => $this->t('Attendee Date'),
-        '#required' => TRUE,
-  );
+	$form['event-date-att'] = array(
+	        '#type' => 'datetime',
+         	'#title' => $this->t('Attendee Date'),
+	'#required' => TRUE,
+	  );
 
 	$form['event-venue'] = array(
 		'#type' => 'textfield',
@@ -93,8 +93,8 @@ class EventCreateForm extends FormBase {
   	$event_name = $form_state->getValue('event-name');
   	$event_description = $form_state->getValue('event-description');
   	$event_venue = $form_state->getValue('event-venue');
-    $event_date_vol = $form_state->getValue('event-date-att');
-  	$event_date_date = $form_state->getValue('event-date-vol');
+    $event_date_att = $form_state->getValue('event-date-att');
+  	$event_date_vol = $form_state->getValue('event-date-vol');
     $event_status = $form_state->getValue('event-status');
 
     //split the date to array. Original format: "yyyy-mm-dd hh:mm:ss Country/City"

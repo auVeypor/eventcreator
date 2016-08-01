@@ -1,15 +1,16 @@
+uuid: df9b0bbf-fca4-4165-bdf0-fe6c76d9fd90
 langcode: en
 status: true
 dependencies:
-    module:
-        - node
-        - rng
+  module:
+    - node
+    - rng
 id: node.rng_registration_type
 field_name: rng_registration_type
 entity_type: node
 type: entity_reference
 settings:
-    target_type: registration_type
+  target_type: registration_type
 module: core
 locked: false
 cardinality: -1

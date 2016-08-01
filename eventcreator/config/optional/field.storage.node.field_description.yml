@@ -1,15 +1,16 @@
+uuid: ed9601e2-b884-4b98-99da-bb493b87cec3
 langcode: en
 status: true
 dependencies:
-    module:
-        - node
-        - text
-id: node.field_description_vol
-field_name: field_description_vol
+  module:
+    - node
+    - text
+id: node.field_description
+field_name: field_description
 entity_type: node
 type: text
 settings:
-    max_length: 255
+  max_length: 255
 module: text
 locked: false
 cardinality: 1
