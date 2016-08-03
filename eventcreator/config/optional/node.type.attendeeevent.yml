@@ -1,16 +1,18 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - menu_ui
-  enforced:
-     module:
-       - eventcreator
+    enforced:
+        module:
+            - eventcreator
+    module:
+        - menu_ui
 third_party_settings:
-  menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    menu_ui:
+        available_menus:
+            - main
+        parent: 'main:'
+_core:
+    default_config_hash: ezStbJmwzjAbLV3Faz0Z2h38_ipyRLtafA_WaMq0Zu0
 name: AttendeeEvent
 type: attendeeevent
 description: ''

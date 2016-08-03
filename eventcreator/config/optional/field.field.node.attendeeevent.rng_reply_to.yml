@@ -1,10 +1,11 @@
-uuid: f6228fbf-fbd0-4cbf-89c7-16644e4b1a3b
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.rng_reply_to
-    - node.type.attendeeevent
+    config:
+        - field.storage.node.rng_reply_to
+        - node.type.attendeeevent
+_core:
+    default_config_hash: zuchg82nQW_dI01JI6MEwy691CdLO-vIfodZwSpk3Uk
 id: node.attendeeevent.rng_reply_to
 field_name: rng_reply_to
 entity_type: node

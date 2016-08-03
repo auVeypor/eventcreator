@@ -1,10 +1,11 @@
-uuid: 2c01b788-3668-4f02-ae74-430656eb6e05
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.rng_reply_to
-    - node.type.volunteerevent
+    config:
+        - field.storage.node.rng_reply_to
+        - node.type.volunteerevent
+_core:
+    default_config_hash: 2tkRbVtfoHmJ82mBGHt4KRjfCc5ADPc-E_CRQ2Pr-bI
 id: node.volunteerevent.rng_reply_to
 field_name: rng_reply_to
 entity_type: node

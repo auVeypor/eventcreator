@@ -1,16 +1,17 @@
-uuid: 2efa7898-392e-4325-9f19-ff81296b491a
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
+    module:
+        - node
+_core:
+    default_config_hash: o4TCBZE6DedLz3ZJDtMp-Ow5Ns1KUKI4NeSaGgZr-34
 id: node.rng_capacity
 field_name: rng_capacity
 entity_type: node
 type: integer
 settings:
-  unsigned: false
-  size: normal
+    unsigned: false
+    size: normal
 module: core
 locked: false
 cardinality: 1

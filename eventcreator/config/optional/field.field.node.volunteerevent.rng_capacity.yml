@@ -1,10 +1,11 @@
-uuid: 05482267-582c-477e-8756-4007a4a5b267
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.rng_capacity
-    - node.type.volunteerevent
+    config:
+        - field.storage.node.rng_capacity
+        - node.type.volunteerevent
+_core:
+    default_config_hash: ZG7FB27xsr9h7sU65___H2FgHm4aduqV77QiMHBqH-c
 id: node.volunteerevent.rng_capacity
 field_name: rng_capacity
 entity_type: node
@@ -16,8 +17,8 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: 1
-  max: null
-  prefix: ''
-  suffix: ''
+    min: 1
+    max: null
+    prefix: ''
+    suffix: ''
 field_type: integer

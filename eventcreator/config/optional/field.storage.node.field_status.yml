@@ -1,16 +1,17 @@
-uuid: 6bb7572a-a2a3-458c-9f67-ed0e4a4122c2
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
+    module:
+        - node
+_core:
+    default_config_hash: aQq7vwxXSluGkILyxnWgrfceZn5qRuN3nZd8vgaSqBY
 id: node.field_status
 field_name: field_status
 entity_type: node
 type: integer
 settings:
-  unsigned: false
-  size: normal
+    unsigned: false
+    size: normal
 module: core
 locked: false
 cardinality: 1

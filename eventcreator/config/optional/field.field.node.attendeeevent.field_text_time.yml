@@ -1,10 +1,11 @@
-uuid: 96e1b7a0-0113-4117-9517-45629acc4b65
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_text_time
-    - node.type.attendeeevent
+    config:
+        - field.storage.node.field_text_time
+        - node.type.attendeeevent
+_core:
+    default_config_hash: '-Ax_hTlSWtbIACm7dC8wekYYYWzttc1vgZ0VOWa8_Lo'
 id: node.attendeeevent.field_text_time
 field_name: field_text_time
 entity_type: node

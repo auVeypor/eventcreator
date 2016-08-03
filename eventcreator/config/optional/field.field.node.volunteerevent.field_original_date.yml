@@ -1,10 +1,11 @@
-uuid: d5a21da0-d207-45a7-ae9f-81a7f91bc471
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_original_date
-    - node.type.volunteerevent
+    config:
+        - field.storage.node.field_original_date
+        - node.type.volunteerevent
+_core:
+    default_config_hash: p6OIby5gfn3YtGIy5JMTmEF5DedD-iGgPoj6btH99so
 id: node.volunteerevent.field_original_date
 field_name: field_original_date
 entity_type: node

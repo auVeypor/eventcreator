@@ -1,10 +1,11 @@
-uuid: e0814c97-ef4f-477f-b10d-cfa53807b7f4
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_venue
-    - node.type.attendeeevent
+    config:
+        - field.storage.node.field_venue
+        - node.type.attendeeevent
+_core:
+    default_config_hash: IV24GcVTCjHPvnMdiwPhYs_mGzJTUUbvl0f1tix92W8
 id: node.attendeeevent.field_venue
 field_name: field_venue
 entity_type: node

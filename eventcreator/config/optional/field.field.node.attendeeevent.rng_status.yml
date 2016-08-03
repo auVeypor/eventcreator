@@ -1,10 +1,11 @@
-uuid: 5b165d9e-0db2-48d9-a30f-5d5182fd6a6b
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.rng_status
-    - node.type.attendeeevent
+    config:
+        - field.storage.node.rng_status
+        - node.type.attendeeevent
+_core:
+    default_config_hash: 8kJ1T95YlIc1JGQ7BcQT7wlmXL5wznBG_-HgqlBtTOM
 id: node.attendeeevent.rng_status
 field_name: rng_status
 entity_type: node
@@ -16,6 +17,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  on_label: 'Accepting new registrations'
-  off_label: 'Not accepting new registrations'
+    on_label: 'Accepting new registrations'
+    off_label: 'Not accepting new registrations'
 field_type: boolean

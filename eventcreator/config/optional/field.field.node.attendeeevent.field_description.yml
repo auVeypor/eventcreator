@@ -1,12 +1,13 @@
-uuid: 315af4ab-3ab2-4336-a618-fccb4a3f3368
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.storage.node.field_description
-    - node.type.attendeeevent
-  module:
-    - text
+    config:
+        - field.storage.node.field_description
+        - node.type.attendeeevent
+    module:
+        - text
+_core:
+    default_config_hash: zl0QIpYvJZng8hHsf-WE62GuHzKTIg2zbUphPjLG-JY
 id: node.attendeeevent.field_description
 field_name: field_description
 entity_type: node

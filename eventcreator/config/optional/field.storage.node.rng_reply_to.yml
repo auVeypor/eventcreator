@@ -1,9 +1,10 @@
-uuid: 7f292960-7054-4ffb-a222-19845273848b
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
+    module:
+        - node
+_core:
+    default_config_hash: 168zE8GToIdp-PJp4O4XTY_B85OSl_2TmFxl2vg1dyY
 id: node.rng_reply_to
 field_name: rng_reply_to
 entity_type: node
