@@ -185,8 +185,8 @@ class EventCreateForm extends FormBase {
     	$vol->save();
     }
   	// Once we've saved and verified everything, we can redirect and set a success message!
-  	drupal_set_message($this->t('Successfully created event: @event', array('@event' => $event_name)));
-  	$response = new RedirectResponse('view/' . $parent_event->id());
-  	$response->send();
+    drupal_set_message($this->t('Successfully created event: @event', array('@event' => $event_name)));
+    $response = new RedirectResponse('view/' . $att->id() . '/' . $vol->id());
+    $response->send();
   }
 }
