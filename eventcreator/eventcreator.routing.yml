@@ -7,10 +7,10 @@ eventcreator.create:
     _permission: 'access content add event entities'
 
 # May have to use this for event viewing
-# eventcreator.view:
-  # path: '/event/view/{id}'
-  # defaults:
-    # _title: 'View Event'
-    # _controller: '\Drupal\eventcreator\Controller\EventViewController::content'
-  # requirements:
-    # _permission: 'access content'
+eventcreator.view:
+  path: '/event/view/{aid}/{vid}'
+  defaults:
+    _title: 'View Event'
+    _controller: '\Drupal\eventcreator\Controller\EventViewController::content'
+  requirements:
+    _permission: 'access content'
