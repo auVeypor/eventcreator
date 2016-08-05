@@ -181,18 +181,17 @@ class EventCreateForm extends FormBase {
     }
   	// Once we've saved and verified everything, we can redirect and set a success message!
     drupal_set_message($this->t('Successfully created event: @event', array('@event' => $event_name)));
-    $attID = 0;
-    $volID = 0;
-    if($att){
-      $attID = $att->id();
-    }
-    if($vol) 
-    {
-      $volID = $vol->id();
+    $url = '';
+    
+    if($att && !$vol) {
+      $url = 'view/' . $att->id();
+    } else if($vol && !$att) {
+      $url = 'view/' . $vol->id();
+    } else if ($vol && $att) {
+      $url = 'view/' . $att->id() . '/' . $vol->id();
     }
   
-    $response = new RedirectResponse('view/' . $attID . '/' . $volID);
-    
+    $response = new RedirectResponse($url);
     $response->send();
   }
 }

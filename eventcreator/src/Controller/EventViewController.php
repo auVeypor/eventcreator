@@ -25,4 +25,20 @@ class EventViewController extends ControllerBase {
 
 		return $build;
 	}
+
+	public function content_single($id) {
+		// Needed for constructing the URL
+		global $base_url;
+
+		// Load the single event (doesn't matter which it is)
+		$event = Node::load($id);
+		$link = "<a href=" . $base_url . "/node/" . $id . ">" . $event->label() . "</a><br>";
+			
+		// And build the HTML
+		$build = array(
+			'#type' => 'markup',
+			'#markup' => $this->t($link)
+		);
+		return $build;
+	}
 }
