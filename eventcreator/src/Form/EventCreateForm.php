@@ -55,23 +55,13 @@ class EventCreateForm extends FormBase {
   		'#title' => $this->t('Volunteer Date'),
       '#required' => TRUE,
   	);
-    /*
-    $form['volCheck'] = array(
-      '#type' => 'checkbox',
-      '#title' => $this->t('Create a volunteer event'),
-    );
-    */
+
   	$form['event-date-att'] = array(
       '#type' => 'datetime',
      	'#title' => $this->t('Attendee Date'),
       '#required' => TRUE,
   	);
-    /*
-    $form['attCheck'] = array(
-      '#type' => 'checkbox',
-      '#title' => $this->t('Create an attendee event'),
-    );
-    */
+
   	$form['event-venue'] = array(
   		'#type' => 'textfield',
   		'#title' => $this->t('Venue'),
@@ -83,14 +73,17 @@ class EventCreateForm extends FormBase {
     '#title' => $this->t('Status'),
     '#required' => TRUE,
     );
-    /*
-    $form['settings']['active'] = array(
-      '#type' => 'radios',
-      '#title' => $this->t('Poll status'),
-      '#default_value' => 1,
-      '#options' => array(0 => $this->t('Closed'), 1 => $this->t('Active')),
-    );
-  */
+
+    $form['event-status2'] = [
+      '#type' => 'select',
+      '#title' => $this->t('Select element'),
+      '#options' => [
+        '1' => $this->t('Going ahead'),
+        '2' => $this->t('Pending'),
+        '3' => $this->t('Cancelled'),
+      ],
+    ];
+
   	$form['submit-event'] = array(
   	  '#type' => 'submit',
   	  '#value' => $this->t('Create Event'),
@@ -125,6 +118,7 @@ class EventCreateForm extends FormBase {
     $event_date_att = $form_state->getValue('event-date-att');
   	$event_date_vol = $form_state->getValue('event-date-vol');
     $event_status = $form_state->getValue('event-status');
+    $event_status2 = $form_state->getValue('event-status2');
     $event_include = $form_state->getValue('event-include');
 
 
@@ -136,8 +130,8 @@ class EventCreateForm extends FormBase {
     $date_list_vol = explode(" ", $event_date_vol);
     $date_list_att = explode(" ", $event_date_att);
     
-    \Drupal::logger('eventcreator')->error($event_include[1]);
-    \Drupal::logger('eventcreator')->error($event_include[2]);
+    //\Drupal::logger('eventcreator')->error($event_include[1]);
+    \Drupal::logger('eventcreator')->error($event_status2);
 
   	// Save the parent event
   	$parent_event = Event::create([
@@ -150,7 +144,8 @@ class EventCreateForm extends FormBase {
   	]);
   	$parent_event->save();
 
-
+    $att = NULL;
+    $vol = NULL;
     if($event_include[1] > 0)
     {
     	// Now for the two sub events
@@ -186,7 +181,18 @@ class EventCreateForm extends FormBase {
     }
   	// Once we've saved and verified everything, we can redirect and set a success message!
     drupal_set_message($this->t('Successfully created event: @event', array('@event' => $event_name)));
-    $response = new RedirectResponse('view/' . $att->id() . '/' . $vol->id());
+    $attID = 0;
+    $volID = 0;
+    if($att){
+      $attID = $att->id();
+    }
+    if($vol) 
+    {
+      $volID = $vol->id();
+    }
+  
+    $response = new RedirectResponse('view/' . $attID . '/' . $volID);
+    
     $response->send();
   }
 }
