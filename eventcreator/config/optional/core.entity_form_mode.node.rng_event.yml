@@ -1,11 +1,10 @@
-uuid: bffec414-5b5b-49ce-bd10-14892cf16af5
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
+    module:
+        - node
 _core:
-  default_config_hash: 07lRgaM-5QGxWrDj7ycaWtIEDS2s3Trgla274DNJG4U
+    default_config_hash: YlQTxILFsNEE3iivS4wxokXYn-mjWtxcDF5LkwNbC_Q
 id: node.rng_event
 label: 'Event Settings'
 targetEntityType: node

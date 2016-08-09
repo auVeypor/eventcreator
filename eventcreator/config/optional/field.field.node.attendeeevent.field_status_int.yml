@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
     config:
-        - field.storage.node.field_status
-        - node.type.volunteerevent
-id: node.volunteerevent.field_status
-field_name: field_status
+        - field.storage.node.field_status_int
+        - node.type.attendeeevent
+id: node.attendeeevent.field_status_int
+field_name: field_status_int
 entity_type: node
-bundle: volunteerevent
-label: Status
+bundle: attendeeevent
+label: 'Status int'
 description: ''
 required: false
 translatable: false

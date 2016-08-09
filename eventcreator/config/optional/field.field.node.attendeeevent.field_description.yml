@@ -7,7 +7,7 @@ dependencies:
     module:
         - text
 _core:
-    default_config_hash: zl0QIpYvJZng8hHsf-WE62GuHzKTIg2zbUphPjLG-JY
+    default_config_hash: JkMQONlE7vgQBXHsko5oX_DaJWtiQCiBThbwEUftsE0
 id: node.attendeeevent.field_description
 field_name: field_description
 entity_type: node

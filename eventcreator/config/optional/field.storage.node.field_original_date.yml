@@ -4,7 +4,7 @@ dependencies:
     module:
         - node
 _core:
-    default_config_hash: nOvxglwLchESwvxziIw0pe1wwXMu5mbBziu0iEfnOVg
+    default_config_hash: xkPM7CuWB-A3Eecybrvupxz4G69Z_GNp8jJHgRr7upw
 id: node.field_original_date
 field_name: field_original_date
 entity_type: node

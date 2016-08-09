@@ -4,7 +4,7 @@ dependencies:
     module:
         - node
 _core:
-    default_config_hash: c4sn3LqDOb5qx0VTjxnMQciNOSttjz7T4eyIyZDluuY
+    default_config_hash: 5wAsVnqa_bjdQlAjOxIGGB_kNSF8TJKcJso51mjimhM
 id: node.rng_registrants_duplicate
 field_name: rng_registrants_duplicate
 entity_type: node

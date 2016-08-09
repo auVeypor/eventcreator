@@ -16,8 +16,8 @@ class EventViewController extends ControllerBase {
 		$vol = Node::load($vid);
 
 		// Construct the HTML to display (two links corresponding to each event)
-		$links .= "<a href=" . $base_url . "/node/" . $aid . ">" . $att->label() . "</a><br>";
-		$links .= "<a href=" . $base_url . "/node/" . $vid . ">" . $vol->label() . "</a>";
+		$links .= "<a href=" . $base_url . "/event/attendee/view/" . $aid . ">" . $att->label() . "</a><br>";
+		$links .= "<a href=" . $base_url . "/event/volunteer/view/" . $vid . ">" . $vol->label() . "</a>";
 		$build = array(
 			'#type' => 'markup',
 			'#markup' => $this->t($links)
@@ -32,7 +32,8 @@ class EventViewController extends ControllerBase {
 
 		// Load the single event (doesn't matter which it is)
 		$event = Node::load($id);
-		$link = "<a href=" . $base_url . "/node/" . $id . ">" . $event->label() . "</a><br>";
+		$type = strtolower(end(explode(" ", $event->label())));
+		$link = "<a href=" . $base_url . "/event/" . $type . "/view/" . $id . ">" . $event->label() . "</a><br>";
 			
 		// And build the HTML
 		$build = array(

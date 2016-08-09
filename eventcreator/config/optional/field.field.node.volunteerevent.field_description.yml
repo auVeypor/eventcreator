@@ -7,7 +7,7 @@ dependencies:
     module:
         - text
 _core:
-    default_config_hash: '-wG0Ji713S0Jxeq-rnTb-vuNbS6jzloX5qsMf35Ilxo'
+    default_config_hash: TKTMw2WQw4UGAgPhJWJq7IWIrz0px3nCmS0q7Hj05Js
 id: node.volunteerevent.field_description
 field_name: field_description
 entity_type: node

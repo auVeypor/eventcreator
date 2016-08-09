@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.rng_reply_to
         - node.type.volunteerevent
 _core:
-    default_config_hash: 2tkRbVtfoHmJ82mBGHt4KRjfCc5ADPc-E_CRQ2Pr-bI
+    default_config_hash: PN5kbLbSTgriAc1qsSwL-1yksmre3kyxxcNUkzYFpfs
 id: node.volunteerevent.rng_reply_to
 field_name: rng_reply_to
 entity_type: node

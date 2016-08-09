@@ -68,15 +68,9 @@ class EventCreateForm extends FormBase {
       '#required' => TRUE,
   	);
 
-    $form['event-status'] = array(
-    '#type' => 'number',
-    '#title' => $this->t('Status'),
-    '#required' => TRUE,
-    );
-
-    $form['event-status2'] = [
+    $form['event-status'] = [
       '#type' => 'select',
-      '#title' => $this->t('Select element'),
+      '#title' => $this->t('Select status'),
       '#options' => [
         '1' => $this->t('Going ahead'),
         '2' => $this->t('Pending'),
@@ -112,13 +106,13 @@ class EventCreateForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
   	// Grab the data from the form
+    $status_strings = array("Going ahead", "Pending", "Cancelled");
   	$event_name = $form_state->getValue('event-name');
   	$event_description = $form_state->getValue('event-description');
   	$event_venue = $form_state->getValue('event-venue');
     $event_date_att = $form_state->getValue('event-date-att');
   	$event_date_vol = $form_state->getValue('event-date-vol');
     $event_status = $form_state->getValue('event-status');
-    $event_status2 = $form_state->getValue('event-status2');
     $event_include = $form_state->getValue('event-include');
 
 
@@ -131,7 +125,7 @@ class EventCreateForm extends FormBase {
     $date_list_att = explode(" ", $event_date_att);
     
     //\Drupal::logger('eventcreator')->error($event_include[1]);
-    \Drupal::logger('eventcreator')->error($event_status2);
+    \Drupal::logger('eventcreator')->error($event_status);
 
   	// Save the parent event
   	$parent_event = Event::create([
@@ -159,7 +153,8 @@ class EventCreateForm extends FormBase {
           'field_text_time' => $date_list_att[1],
           'field_description' => $event_description,
           'field_venue' => $event_venue,
-          'field_status' => $event_status,
+          'field_status_int' => $event_status,
+          'field_status' => $status_strings[intval($event_status)-1],
     	));
     	$att->save();
     }
@@ -175,7 +170,8 @@ class EventCreateForm extends FormBase {
           'field_text_time' => $date_list_vol[1],
         	'field_description' => $event_description,
         	'field_venue' => $event_venue,
-        	'field_status' => $event_status,
+          'field_status_int' => $event_status,
+          'field_status' => $status_strings[intval($event_status)-1],
     	));
     	$vol->save();
     }

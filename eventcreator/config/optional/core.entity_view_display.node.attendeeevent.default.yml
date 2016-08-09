@@ -1,73 +1,81 @@
-uuid: b0d0263f-d7a2-43a9-a377-c8c3f6ad6e84
 langcode: en
 status: true
 dependencies:
-  config:
-    - field.field.node.attendeeevent.field_description
-    - field.field.node.attendeeevent.field_original_date
-    - field.field.node.attendeeevent.field_status
-    - field.field.node.attendeeevent.field_text_date
-    - field.field.node.attendeeevent.field_text_time
-    - field.field.node.attendeeevent.field_venue
-    - field.field.node.attendeeevent.rng_capacity
-    - field.field.node.attendeeevent.rng_registrants_duplicate
-    - field.field.node.attendeeevent.rng_registration_groups
-    - field.field.node.attendeeevent.rng_registration_type
-    - field.field.node.attendeeevent.rng_reply_to
-    - field.field.node.attendeeevent.rng_status
-    - node.type.attendeeevent
-  module:
-    - text
-    - user
+    config:
+        - field.field.node.attendeeevent.field_description
+        - field.field.node.attendeeevent.field_original_date
+        - field.field.node.attendeeevent.field_status
+        - field.field.node.attendeeevent.field_status_int
+        - field.field.node.attendeeevent.field_text_date
+        - field.field.node.attendeeevent.field_text_time
+        - field.field.node.attendeeevent.field_venue
+        - field.field.node.attendeeevent.rng_capacity
+        - field.field.node.attendeeevent.rng_registrants_duplicate
+        - field.field.node.attendeeevent.rng_registration_groups
+        - field.field.node.attendeeevent.rng_registration_type
+        - field.field.node.attendeeevent.rng_reply_to
+        - field.field.node.attendeeevent.rng_status
+        - node.type.attendeeevent
+    module:
+        - text
+        - user
+_core:
+    default_config_hash: qWdO2sEbEzPOv8LBBLWRcDfFqfT3CJfTJVP1zBpcfhc
 id: node.attendeeevent.default
 targetEntityType: node
 bundle: attendeeevent
 mode: default
 content:
-  field_description:
-    weight: 108
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-  field_status:
-    weight: 106
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-  field_text_date:
-    weight: 102
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_text_time:
-    weight: 103
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  field_venue:
-    weight: 107
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
+    field_description:
+        weight: 108
+        label: above
+        settings: {  }
+        third_party_settings: {  }
+        type: text_default
+    field_status:
+        weight: 109
+        label: above
+        settings:
+            link_to_entity: false
+        third_party_settings: {  }
+        type: string
+    field_status_int:
+        weight: 110
+        label: above
+        settings:
+            link_to_entity: false
+        third_party_settings: {  }
+        type: string
+    field_text_date:
+        weight: 102
+        label: above
+        settings:
+            link_to_entity: false
+        third_party_settings: {  }
+        type: string
+    field_text_time:
+        weight: 103
+        label: above
+        settings:
+            link_to_entity: false
+        third_party_settings: {  }
+        type: string
+    field_venue:
+        weight: 107
+        label: above
+        settings:
+            link_to_entity: false
+        third_party_settings: {  }
+        type: string
+    links:
+        weight: 100
+        settings: {  }
+        third_party_settings: {  }
 hidden:
-  field_original_date: true
-  rng_capacity: true
-  rng_registrants_duplicate: true
-  rng_registration_groups: true
-  rng_registration_type: true
-  rng_reply_to: true
-  rng_status: true
+    field_original_date: true
+    rng_capacity: true
+    rng_registrants_duplicate: true
+    rng_registration_groups: true
+    rng_registration_type: true
+    rng_reply_to: true
+    rng_status: true

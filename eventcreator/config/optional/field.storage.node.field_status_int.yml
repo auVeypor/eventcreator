@@ -3,10 +3,8 @@ status: true
 dependencies:
     module:
         - node
-_core:
-    default_config_hash: uZ1D9otBZFGASwYJuFDuG5-UGl_G4zX_AiVPQfaDMjU
-id: node.field_text_time
-field_name: field_text_time
+id: node.field_status_int
+field_name: field_status_int
 entity_type: node
 type: string
 settings:

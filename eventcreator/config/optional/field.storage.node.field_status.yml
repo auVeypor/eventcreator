@@ -3,15 +3,14 @@ status: true
 dependencies:
     module:
         - node
-_core:
-    default_config_hash: aQq7vwxXSluGkILyxnWgrfceZn5qRuN3nZd8vgaSqBY
 id: node.field_status
 field_name: field_status
 entity_type: node
-type: integer
+type: string
 settings:
-    unsigned: false
-    size: normal
+    max_length: 255
+    is_ascii: false
+    case_sensitive: false
 module: core
 locked: false
 cardinality: 1

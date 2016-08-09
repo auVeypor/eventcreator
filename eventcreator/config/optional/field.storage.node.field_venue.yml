@@ -4,7 +4,7 @@ dependencies:
     module:
         - node
 _core:
-    default_config_hash: YIBTk59pj3apVOC0na2i-zcxwQuq-JJ1qYfy3oRFuAI
+    default_config_hash: 5TvXezB7swzJvo-fwuJta3IcKCswO74KLNTwPIIz8uA
 id: node.field_venue
 field_name: field_venue
 entity_type: node
