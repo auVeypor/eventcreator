@@ -42,25 +42,42 @@ class EventCreateForm extends FormBase {
       '#required' => TRUE,
   	);
 
-    $eventOptions = array(1=>'Attendee',2=>'Volunteer');
-
-    $form['event-include'] = array(
-      '#type' => 'checkboxes',
-      '#title' => 'Choose to create events',
-      '#options'=> $eventOptions,  
+    $form['checkAtt'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Attendee')
     );
 
-  	$form['event-date-vol'] = array(
-  		'#type' => 'datetime',
-  		'#title' => $this->t('Volunteer Date'),
-      '#required' => TRUE,
-  	);
-
-  	$form['event-date-att'] = array(
+    $form['event-date-att'] = array(
       '#type' => 'datetime',
-     	'#title' => $this->t('Attendee Date'),
+      '#title' => $this->t('Attendee Date'),
       '#required' => TRUE,
-  	);
+      '#states' => array(
+        'visible' => array(
+          ':input[name="checkAtt"]' => array('checked' => TRUE),
+        ),
+        'optional' => array(
+          ':input[name="checkAtt"]' => array('checked' => FALSE),
+        )
+      )
+    );
+
+    $form['checkVol'] = array(
+      '#type' => 'checkbox',
+      '#title' => $this->t('Volunteer')
+    );
+
+    $form['event-date-vol'] = array(
+      '#type' => 'datetime',
+      '#title' => $this->t('Volunteer Date'),
+      '#states' => array(
+        'visible' => array(
+          ':input[name="checkVol"]' => array('checked' => TRUE),
+        ),
+        'optional' => array(
+          ':input[name="checkVol"]' => array('checked' => FALSE),
+        )
+      )
+    );
 
   	$form['event-venue'] = array(
   		'#type' => 'textfield',
@@ -94,8 +111,9 @@ class EventCreateForm extends FormBase {
     if (!($status >= 0 && $status <= 2)) {
         $form_state->setErrorByName('event-status', $this->t("Must enter a valid event status"));
     }
-    $event_include = $form_state->getValue('event-include');
-      if($event_include[1] == 0 && $event_include[2] == 0)
+    $event_include_att = $form_state->getValue('checkAtt');
+    $event_include_vol = $form_state->getValue('checkVol');
+    if($event_include_vol == 0 && $event_include_att == 0)
     {
       $form_state->setErrorByName('event-include', $this->t("Must select at least one event to create"));
     }
@@ -110,10 +128,22 @@ class EventCreateForm extends FormBase {
   	$event_name = $form_state->getValue('event-name');
   	$event_description = $form_state->getValue('event-description');
   	$event_venue = $form_state->getValue('event-venue');
-    $event_date_att = $form_state->getValue('event-date-att');
-  	$event_date_vol = $form_state->getValue('event-date-vol');
+
+    if($form_state->hasValue('event-date-att')) { 
+      $event_date_att = $form_state->getValue('event-date-att');
+    } else {
+      $event_date_att = "";
+    }
+
+    if($form_state->hasValue('event-date-vol')) { 
+     $event_date_vol = $form_state->getValue('event-date-vol');
+    } else {
+      $event_date_vol = "";
+    }
+
     $event_status = $form_state->getValue('event-status');
-    $event_include = $form_state->getValue('event-include');
+    $event_include_att = $form_state->getValue('checkAtt');
+    $event_include_vol = $form_state->getValue('checkVol');
 
 
     //var_dump($form_state->getValue(gettype($event_include[1])));
@@ -140,7 +170,7 @@ class EventCreateForm extends FormBase {
 
     $att = NULL;
     $vol = NULL;
-    if($event_include[1] > 0)
+    if($event_include_att > 0)
     {
     	// Now for the two sub events
     	$att = Node::create(array(
@@ -158,7 +188,7 @@ class EventCreateForm extends FormBase {
     	));
     	$att->save();
     }
-    if($event_include[2] > 0)
+    if($event_include_vol > 0)
     {
     	$vol = Node::create(array(
         	'type' => 'volunteerevent',
