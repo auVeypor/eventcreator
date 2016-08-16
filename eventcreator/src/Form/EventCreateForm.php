@@ -50,7 +50,6 @@ class EventCreateForm extends FormBase {
     $form['event-date-att'] = array(
       '#type' => 'datetime',
       '#title' => $this->t('Attendee Date'),
-      '#required' => TRUE,
       '#states' => array(
         'visible' => array(
           ':input[name="checkAtt"]' => array('checked' => TRUE),
