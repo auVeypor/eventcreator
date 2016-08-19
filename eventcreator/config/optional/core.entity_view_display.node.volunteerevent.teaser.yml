@@ -5,6 +5,8 @@ dependencies:
         - core.entity_view_mode.node.teaser
         - field.field.node.volunteerevent.field_description
         - field.field.node.volunteerevent.field_original_date
+        - field.field.node.volunteerevent.field_status
+        - field.field.node.volunteerevent.field_status_int
         - field.field.node.volunteerevent.field_text_date
         - field.field.node.volunteerevent.field_text_time
         - field.field.node.volunteerevent.field_venue
@@ -18,7 +20,7 @@ dependencies:
     module:
         - user
 _core:
-    default_config_hash: mIhZys-xul6ygencMQM5Uw0ornhYOSwtCZ-v4GGtcnw
+    default_config_hash: iwrtqPV0JdrDJ99u0Ej5sOko23GPkGoCF_6JFsUXGuQ
 id: node.volunteerevent.teaser
 targetEntityType: node
 bundle: volunteerevent
@@ -29,6 +31,8 @@ content:
 hidden:
     field_description: true
     field_original_date: true
+    field_status: true
+    field_status_int: true
     field_text_date: true
     field_text_time: true
     field_venue: true

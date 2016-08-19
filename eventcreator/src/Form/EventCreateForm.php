@@ -36,15 +36,22 @@ class EventCreateForm extends FormBase {
       '#required' => TRUE,
   	);
 
-  	$form['event-description'] = array(
-  		'#type' => 'textarea',
-  		'#title' => $this->t('Event description'),
-      '#required' => TRUE,
-  	);
-
     $form['checkAtt'] = array(
       '#type' => 'checkbox',
       '#title' => $this->t('Attendee')
+    );
+
+    $form['event-desc-att'] = array(
+      '#type' => 'textarea',
+      '#title' => $this->t('Attendee Event Description'),
+      '#states' => array(
+        'visible' => array(
+          ':input[name="checkAtt"]' => array('checked' => TRUE),
+        ),
+        'optional' => array(
+          ':input[name="checkAtt"]' => array('checked' => FALSE),
+        )
+      )
     );
 
     $form['event-date-att'] = array(
@@ -65,6 +72,19 @@ class EventCreateForm extends FormBase {
       '#title' => $this->t('Volunteer')
     );
 
+     $form['event-desc-vol'] = array(
+      '#type' => 'textarea',
+      '#title' => $this->t('Volunteer Event Description'),
+      '#states' => array(
+        'visible' => array(
+          ':input[name="checkVol"]' => array('checked' => TRUE),
+        ),
+        'optional' => array(
+          ':input[name="checkVol"]' => array('checked' => FALSE),
+        )
+      )
+    );
+
     $form['event-date-vol'] = array(
       '#type' => 'datetime',
       '#title' => $this->t('Volunteer Date'),
@@ -80,6 +100,7 @@ class EventCreateForm extends FormBase {
 
   	$form['event-venue'] = array(
   		'#type' => 'textfield',
+      '#description' => $this->t('E.g. 1 Hargreaves St, Unanderra NSW 2526'),
   		'#title' => $this->t('Venue'),
       '#required' => TRUE,
   	);
@@ -128,6 +149,18 @@ class EventCreateForm extends FormBase {
   	$event_description = $form_state->getValue('event-description');
   	$event_venue = $form_state->getValue('event-venue');
 
+    if($form_state->hasValue('event-desc-att')) { 
+      $event_desc_att = $form_state->getValue('event-desc-att');
+    } else {
+      $event_desc_att = "";
+    }
+
+    if($form_state->hasValue('event-desc-vol')) { 
+     $event_desc_vol = $form_state->getValue('event-desc-vol');
+    } else {
+      $event_desc_vol = "";
+    }
+
     if($form_state->hasValue('event-date-att')) { 
       $event_date_att = $form_state->getValue('event-date-att');
     } else {
@@ -145,22 +178,16 @@ class EventCreateForm extends FormBase {
     $event_include_vol = $form_state->getValue('checkVol');
 
 
-    //var_dump($form_state->getValue(gettype($event_include[1])));
-    //kill();
-    //$event_eventInclude = $form_state->getInfo('eventInclude');
-
     //split the date to array. Original format: "yyyy-mm-dd hh:mm:ss Country/City"
     $date_list_vol = explode(" ", $event_date_vol);
     $date_list_att = explode(" ", $event_date_att);
     
     //\Drupal::logger('eventcreator')->error($event_include[1]);
-    \Drupal::logger('eventcreator')->error($event_status);
 
   	// Save the parent event
   	$parent_event = Event::create([
   		'label' => $event_name,
   		'name' => $event_name,
-  		'field_description' => $event_description,
   		'field_venue' => $event_venue,
   		//'field_date' => $date,
       'field_status' => $event_status
@@ -180,7 +207,7 @@ class EventCreateForm extends FormBase {
           'field_original_date' => $event_date_att,
           'field_text_date' => $date_list_att[0],
           'field_text_time' => $date_list_att[1],
-          'field_description' => $event_description,
+          'field_description' => $event_desc_att,
           'field_venue' => $event_venue,
           'field_status_int' => $event_status,
           'field_status' => $status_strings[intval($event_status)-1],
@@ -197,7 +224,7 @@ class EventCreateForm extends FormBase {
           'field_original_date' => $event_date_vol,
           'field_text_date' => $date_list_vol[0],
           'field_text_time' => $date_list_vol[1],
-        	'field_description' => $event_description,
+        	'field_description' => $event_desc_vol,
         	'field_venue' => $event_venue,
           'field_status_int' => $event_status,
           'field_status' => $status_strings[intval($event_status)-1],

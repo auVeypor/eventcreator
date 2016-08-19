@@ -5,6 +5,8 @@ dependencies:
         - core.entity_view_mode.node.teaser
         - field.field.node.attendeeevent.field_description
         - field.field.node.attendeeevent.field_original_date
+        - field.field.node.attendeeevent.field_status
+        - field.field.node.attendeeevent.field_status_int
         - field.field.node.attendeeevent.field_text_date
         - field.field.node.attendeeevent.field_text_time
         - field.field.node.attendeeevent.field_venue
@@ -18,7 +20,7 @@ dependencies:
     module:
         - user
 _core:
-    default_config_hash: KjU830QkdqafwYAC7R4LrJBK2dtbIEDpy0q99TzhwNw
+    default_config_hash: q8KBx7UEP1ujxq_zpKkglkYSeKvOgENBrK2OmozoPHk
 id: node.attendeeevent.teaser
 targetEntityType: node
 bundle: attendeeevent
@@ -29,6 +31,8 @@ content:
 hidden:
     field_description: true
     field_original_date: true
+    field_status: true
+    field_status_int: true
     field_text_date: true
     field_text_time: true
     field_venue: true

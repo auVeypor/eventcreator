@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.rng_registration_groups
         - node.type.volunteerevent
 _core:
-    default_config_hash: lEGcU_9DPzRpGUJT8-h5bu-fByb7FQj4aP3OCNlqw9k
+    default_config_hash: jr3j2HJE1HNNyUDz9_m3QUrbjcQtjdKF5E5WAeSTNkA
 id: node.volunteerevent.rng_registration_groups
 field_name: rng_registration_groups
 entity_type: node

@@ -20,7 +20,7 @@ dependencies:
         - path
         - text
 _core:
-    default_config_hash: V-KLyvFnkhJD_WFAPs9qQb_3Vip3gQduJt7n_45Hzik
+    default_config_hash: 2yhzBvWmoAJ-5tmnF37NuHvWEBb8Li_1s3uiQh--mzI
 id: node.attendeeevent.default
 targetEntityType: node
 bundle: attendeeevent

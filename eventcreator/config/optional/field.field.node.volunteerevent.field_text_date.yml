@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.field_text_date
         - node.type.volunteerevent
 _core:
-    default_config_hash: ghRadrrNYN8CD1Dt3KzvsYsPPfhKmI58D9zEpG-VgIE
+    default_config_hash: ROmkA-92dLuO9v1lP4jVgqmUS1IrftO7IQnwgJb8bN0
 id: node.volunteerevent.field_text_date
 field_name: field_text_date
 entity_type: node

@@ -17,10 +17,11 @@ dependencies:
         - field.field.node.attendeeevent.rng_status
         - node.type.attendeeevent
     module:
+        - simple_gmap
         - text
         - user
 _core:
-    default_config_hash: qWdO2sEbEzPOv8LBBLWRcDfFqfT3CJfTJVP1zBpcfhc
+    default_config_hash: rcwWa1TElqUwFk9QDsG9-15a9w1YnE1uZ-hysf-ARO0
 id: node.attendeeevent.default
 targetEntityType: node
 bundle: attendeeevent
@@ -64,9 +65,19 @@ content:
         weight: 107
         label: above
         settings:
-            link_to_entity: false
+            include_map: '1'
+            iframe_width: '600'
+            iframe_height: '450'
+            link_text: 'View larger map'
+            zoom_level: '14'
+            information_bubble: '1'
+            map_type: m
+            langcode: en
+            include_static_map: 0
+            include_link: 0
+            include_text: 0
         third_party_settings: {  }
-        type: string
+        type: simple_gmap
     links:
         weight: 100
         settings: {  }

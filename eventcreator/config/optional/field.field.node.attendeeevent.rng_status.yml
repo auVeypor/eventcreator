@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.rng_status
         - node.type.attendeeevent
 _core:
-    default_config_hash: 0w9iujeBJMU0O6iiyP6-yeOtYkA0KfFRimDbOyBYrII
+    default_config_hash: lz309WiNHK4mQDb3kP9f2alWUjT80VDKSjTT7-PDoBc
 id: node.attendeeevent.rng_status
 field_name: rng_status
 entity_type: node

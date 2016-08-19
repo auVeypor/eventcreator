@@ -5,6 +5,8 @@ dependencies:
         - core.entity_form_mode.node.rng_event
         - field.field.node.volunteerevent.field_description
         - field.field.node.volunteerevent.field_original_date
+        - field.field.node.volunteerevent.field_status
+        - field.field.node.volunteerevent.field_status_int
         - field.field.node.volunteerevent.field_text_date
         - field.field.node.volunteerevent.field_text_time
         - field.field.node.volunteerevent.field_venue
@@ -19,7 +21,7 @@ dependencies:
         - rng
         - unlimited_number
 _core:
-    default_config_hash: 8MKTfGqQ0mULY-n4BDSCChc_nCPreGkX9YjQQeNQqpA
+    default_config_hash: YNqG6yPt-LV4Pa8hiJFa3DDbzD6Yj1_mt7N5vFXmPbs
 id: node.volunteerevent.rng_event
 targetEntityType: node
 bundle: volunteerevent
@@ -66,6 +68,8 @@ hidden:
     created: true
     field_description: true
     field_original_date: true
+    field_status: true
+    field_status_int: true
     field_text_date: true
     field_text_time: true
     field_venue: true

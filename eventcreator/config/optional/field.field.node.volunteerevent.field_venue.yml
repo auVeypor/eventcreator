@@ -5,13 +5,13 @@ dependencies:
         - field.storage.node.field_venue
         - node.type.volunteerevent
 _core:
-    default_config_hash: E9soGxK6RBLIpPOt4EksFJhxKSmyAp_vK2A9Huaq4GQ
+    default_config_hash: CuF9bmAcGRtBknHMy3E36bJzHDXUVrfGLp_LRKC5hLs
 id: node.volunteerevent.field_venue
 field_name: field_venue
 entity_type: node
 bundle: volunteerevent
 label: Venue
-description: ''
+description: 'Eg. 1 Hargreaves St, Unanderra NSW 2526'
 required: false
 translatable: true
 default_value: {  }

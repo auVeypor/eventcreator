@@ -4,7 +4,7 @@ dependencies:
     module:
         - node
 _core:
-    default_config_hash: YlQTxILFsNEE3iivS4wxokXYn-mjWtxcDF5LkwNbC_Q
+    default_config_hash: xgZLqQI_gOJtIMHDQV1H5zU2bkeomxYfCVRpqYLL7w0
 id: node.rng_event
 label: 'Event Settings'
 targetEntityType: node
