@@ -1,10 +1,20 @@
+# for create page
 eventcreator.create:
   path: '/event/create'
   defaults:
     _title: 'Create Event'
     _form: '\Drupal\eventcreator\Form\EventCreateForm'
   requirements:
-    _permission: 'access content add event entities'
+    _permission: 'access content add event nodes'
+
+# for editing page
+eventcreator.edit:
+  path: '/event/edit/{pid}'
+  defaults:
+    _title: 'Edit Event'
+    _form: '\Drupal\eventcreator\Form\EventEditForm'
+  requirements:
+    _permission: 'access content edit event nodes'
 
 # May have to use this for event viewing
 eventcreator.view:
@@ -17,9 +27,9 @@ eventcreator.view:
 
 # View for a single event (if specified by creator)
 eventcreator.view_single:
-  path: '/event/view/{id}'
-  defaults:
+   path: '/event/view/{id}'
+   defaults:
     _title: 'View Event'
     _controller: '\Drupal\eventcreator\Controller\EventViewController::content_single'
-  requirements:
+requirements:
     _permission: 'access content'

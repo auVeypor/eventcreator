@@ -5,11 +5,11 @@ namespace Drupal\eventcreator\Form;
 use Drupal\Core\Entity\ContentEntityDeleteForm;
 
 /**
- * Provides a form for deleting Volunteer event entities.
+ * Provides a form for deleting Parent Event entities.
  *
  * @ingroup eventcreator
  */
-class VolunteerEventDeleteForm extends ContentEntityDeleteForm {
+class ParentEventDeleteForm extends ContentEntityDeleteForm {
 
 
 }

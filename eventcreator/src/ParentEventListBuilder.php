@@ -8,11 +8,11 @@ use Drupal\Core\Routing\LinkGeneratorTrait;
 use Drupal\Core\Url;
 
 /**
- * Defines a class to build a listing of Event entities.
+ * Defines a class to build a listing of Parent Event entities.
  *
  * @ingroup eventcreator
  */
-class EventListBuilder extends EntityListBuilder {
+class ParentEventListBuilder extends EntityListBuilder {
 
   use LinkGeneratorTrait;
 
@@ -20,7 +20,7 @@ class EventListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildHeader() {
-    $header['id'] = $this->t('Event ID');
+    $header['id'] = $this->t('Parent Event ID');
     $header['name'] = $this->t('Name');
     return $header + parent::buildHeader();
   }
@@ -29,13 +29,13 @@ class EventListBuilder extends EntityListBuilder {
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\eventcreator\Entity\Event */
+    /* @var $entity \Drupal\eventcreator\Entity\ParentEvent */
     $row['id'] = $entity->id();
     $row['name'] = $this->l(
       $entity->label(),
       new Url(
-        'entity.event.edit_form', array(
-          'event' => $entity->id(),
+        'entity.parent_event.edit_form', array(
+          'parent_event' => $entity->id(),
         )
       )
     );

@@ -6,17 +6,17 @@ use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Form controller for Attendee event edit forms.
+ * Form controller for Parent Event edit forms.
  *
  * @ingroup eventcreator
  */
-class AttendeeEventForm extends ContentEntityForm {
+class ParentEventForm extends ContentEntityForm {
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    /* @var $entity \Drupal\eventcreator\Entity\AttendeeEvent */
+    /* @var $entity \Drupal\eventcreator\Entity\ParentEvent */
     $form = parent::buildForm($form, $form_state);
     $entity = $this->entity;
 
@@ -32,17 +32,17 @@ class AttendeeEventForm extends ContentEntityForm {
 
     switch ($status) {
       case SAVED_NEW:
-        drupal_set_message($this->t('Created the %label Attendee event.', [
+        drupal_set_message($this->t('Created the %label Parent Event.', [
           '%label' => $entity->label(),
         ]));
         break;
 
       default:
-        drupal_set_message($this->t('Saved the %label Attendee event.', [
+        drupal_set_message($this->t('Saved the %label Parent Event.', [
           '%label' => $entity->label(),
         ]));
     }
-    $form_state->setRedirect('entity.attendee_event.canonical', ['attendee_event' => $entity->id()]);
+    $form_state->setRedirect('entity.parent_event.canonical', ['parent_event' => $entity->id()]);
   }
 
 }

@@ -7,35 +7,35 @@ use Drupal\Core\Field\BaseFieldDefinition;
 use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
-use Drupal\eventcreator\VolunteerEventInterface;
+use Drupal\eventcreator\ParentEventInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the Volunteer event entity.
+ * Defines the Parent Event entity.
  *
  * @ingroup eventcreator
  *
  * @ContentEntityType(
- *   id = "volunteer_event",
- *   label = @Translation("Volunteer event"),
+ *   id = "parent_event",
+ *   label = @Translation("Parent Event"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\eventcreator\VolunteerEventListBuilder",
- *     "views_data" = "Drupal\eventcreator\Entity\VolunteerEventViewsData",
+ *     "list_builder" = "Drupal\eventcreator\ParentEventListBuilder",
+ *     "views_data" = "Drupal\eventcreator\Entity\ParentEventViewsData",
  *
  *     "form" = {
- *       "default" = "Drupal\eventcreator\Form\VolunteerEventForm",
- *       "add" = "Drupal\eventcreator\Form\VolunteerEventForm",
- *       "edit" = "Drupal\eventcreator\Form\VolunteerEventForm",
- *       "delete" = "Drupal\eventcreator\Form\VolunteerEventDeleteForm",
+ *       "default" = "Drupal\eventcreator\Form\ParentEventForm",
+ *       "add" = "Drupal\eventcreator\Form\ParentEventForm",
+ *       "edit" = "Drupal\eventcreator\Form\ParentEventForm",
+ *       "delete" = "Drupal\eventcreator\Form\ParentEventDeleteForm",
  *     },
- *     "access" = "Drupal\eventcreator\VolunteerEventAccessControlHandler",
+ *     "access" = "Drupal\eventcreator\ParentEventAccessControlHandler",
  *     "route_provider" = {
- *       "html" = "Drupal\eventcreator\VolunteerEventHtmlRouteProvider",
+ *       "html" = "Drupal\eventcreator\ParentEventHtmlRouteProvider",
  *     },
  *   },
- *   base_table = "volunteer_event",
- *   admin_permission = "administer volunteer event entities",
+ *   base_table = "parent_event",
+ *   admin_permission = "administer parent event entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -45,16 +45,16 @@ use Drupal\user\UserInterface;
  *     "status" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/volunteer_event/{volunteer_event}",
- *     "add-form" = "/admin/structure/volunteer_event/add",
- *     "edit-form" = "/admin/structure/volunteer_event/{volunteer_event}/edit",
- *     "delete-form" = "/admin/structure/volunteer_event/{volunteer_event}/delete",
- *     "collection" = "/admin/structure/volunteer_event",
+ *     "canonical" = "/admin/structure/parent_event/{parent_event}",
+ *     "add-form" = "/admin/structure/parent_event/add",
+ *     "edit-form" = "/admin/structure/parent_event/{parent_event}/edit",
+ *     "delete-form" = "/admin/structure/parent_event/{parent_event}/delete",
+ *     "collection" = "/admin/structure/parent_event",
  *   },
- *   field_ui_base_route = "volunteer_event.settings"
+ *   field_ui_base_route = "parent_event.settings"
  * )
  */
-class VolunteerEvent extends ContentEntityBase implements VolunteerEventInterface {
+class ParentEvent extends ContentEntityBase implements ParentEventInterface {
 
   use EntityChangedTrait;
 
@@ -149,16 +149,16 @@ class VolunteerEvent extends ContentEntityBase implements VolunteerEventInterfac
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields['id'] = BaseFieldDefinition::create('integer')
       ->setLabel(t('ID'))
-      ->setDescription(t('The ID of the Volunteer event entity.'))
+      ->setDescription(t('The ID of the Parent Event entity.'))
       ->setReadOnly(TRUE);
     $fields['uuid'] = BaseFieldDefinition::create('uuid')
       ->setLabel(t('UUID'))
-      ->setDescription(t('The UUID of the Volunteer event entity.'))
+      ->setDescription(t('The UUID of the Parent Event entity.'))
       ->setReadOnly(TRUE);
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Volunteer event entity.'))
+      ->setDescription(t('The user ID of author of the Parent Event entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -184,7 +184,7 @@ class VolunteerEvent extends ContentEntityBase implements VolunteerEventInterfac
 
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Volunteer event entity.'))
+      ->setDescription(t('The name of the Parent Event entity.'))
       ->setSettings(array(
         'max_length' => 50,
         'text_processing' => 0,
@@ -204,12 +204,12 @@ class VolunteerEvent extends ContentEntityBase implements VolunteerEventInterfac
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
-      ->setDescription(t('A boolean indicating whether the Volunteer event is published.'))
+      ->setDescription(t('A boolean indicating whether the Parent Event is published.'))
       ->setDefaultValue(TRUE);
 
     $fields['langcode'] = BaseFieldDefinition::create('language')
       ->setLabel(t('Language code'))
-      ->setDescription(t('The language code for the Volunteer event entity.'))
+      ->setDescription(t('The language code for the Parent Event entity.'))
       ->setDisplayOptions('form', array(
         'type' => 'language_select',
         'weight' => 10,

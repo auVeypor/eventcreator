@@ -6,13 +6,13 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Class VolunteerEventSettingsForm.
+ * Class ParentEventSettingsForm.
  *
  * @package Drupal\eventcreator\Form
  *
  * @ingroup eventcreator
  */
-class VolunteerEventSettingsForm extends FormBase {
+class ParentEventSettingsForm extends FormBase {
 
   /**
    * Returns a unique string identifying the form.
@@ -21,7 +21,7 @@ class VolunteerEventSettingsForm extends FormBase {
    *   The unique string identifying the form.
    */
   public function getFormId() {
-    return 'VolunteerEvent_settings';
+    return 'ParentEvent_settings';
   }
 
   /**
@@ -37,7 +37,7 @@ class VolunteerEventSettingsForm extends FormBase {
   }
 
   /**
-   * Defines the settings form for Volunteer event entities.
+   * Defines the settings form for Parent Event entities.
    *
    * @param array $form
    *   An associative array containing the structure of the form.
@@ -48,7 +48,7 @@ class VolunteerEventSettingsForm extends FormBase {
    *   Form definition array.
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $form['VolunteerEvent_settings']['#markup'] = 'Settings form for Volunteer event entities. Manage field settings here.';
+    $form['ParentEvent_settings']['#markup'] = 'Settings form for Parent Event entities. Manage field settings here.';
     return $form;
   }
 

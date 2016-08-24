@@ -1,15 +1,5 @@
-entity.event.add_form:
-  route_name: entity.event.add_form
-  title: 'Add Event'
+entity.parent_event.add_form:
+  route_name: entity.parent_event.add_form
+  title: 'Add Parent Event'
   appears_on:
-    - entity.event.collection
-entity.volunteer_event.add_form:
-  route_name: entity.volunteer_event.add_form
-  title: 'Add Volunteer event'
-  appears_on:
-    - entity.volunteer_event.collection
-entity.attendee_event.add_form:
-  route_name: entity.attendee_event.add_form
-  title: 'Add Attendee event'
-  appears_on:
-    - entity.attendee_event.collection
+    - entity.parent_event.collection

@@ -6,9 +6,7 @@ use Drupal\node\Entity\Node;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\eventcreator\Entity\Event;
-use Drupal\eventcreator\Entity\VolunteerEvent;
-use Drupal\eventcreator\Entity\AttendeeEvent;
+use Drupal\eventcreator\Entity\ParentEvent;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
@@ -127,10 +125,6 @@ class EventCreateForm extends FormBase {
    * {@inheritdoc}
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
-    $status = $form_state->getValue('event-status');
-    if (!($status >= 0 && $status <= 2)) {
-        $form_state->setErrorByName('event-status', $this->t("Must enter a valid event status"));
-    }
     $event_include_att = $form_state->getValue('checkAtt');
     $event_include_vol = $form_state->getValue('checkVol');
     if($event_include_vol == 0 && $event_include_att == 0)
@@ -146,8 +140,8 @@ class EventCreateForm extends FormBase {
   	// Grab the data from the form
     $status_strings = array("Going ahead", "Pending", "Cancelled");
   	$event_name = $form_state->getValue('event-name');
-  	$event_description = $form_state->getValue('event-description');
   	$event_venue = $form_state->getValue('event-venue');
+    $event_status = $form_state->getValue('event-status');
 
     if($form_state->hasValue('event-desc-att')) { 
       $event_desc_att = $form_state->getValue('event-desc-att');
@@ -173,26 +167,14 @@ class EventCreateForm extends FormBase {
       $event_date_vol = "";
     }
 
-    $event_status = $form_state->getValue('event-status');
     $event_include_att = $form_state->getValue('checkAtt');
     $event_include_vol = $form_state->getValue('checkVol');
-
 
     //split the date to array. Original format: "yyyy-mm-dd hh:mm:ss Country/City"
     $date_list_vol = explode(" ", $event_date_vol);
     $date_list_att = explode(" ", $event_date_att);
     
     //\Drupal::logger('eventcreator')->error($event_include[1]);
-
-  	// Save the parent event
-  	$parent_event = Event::create([
-  		'label' => $event_name,
-  		'name' => $event_name,
-  		'field_venue' => $event_venue,
-  		//'field_date' => $date,
-      'field_status' => $event_status
-  	]);
-  	$parent_event->save();
 
     $att = NULL;
     $vol = NULL;
@@ -211,6 +193,7 @@ class EventCreateForm extends FormBase {
           'field_venue' => $event_venue,
           'field_status_int' => $event_status,
           'field_status' => $status_strings[intval($event_status)-1],
+          'field_parentid' => 0,
     	));
     	$att->save();
     }
@@ -228,9 +211,42 @@ class EventCreateForm extends FormBase {
         	'field_venue' => $event_venue,
           'field_status_int' => $event_status,
           'field_status' => $status_strings[intval($event_status)-1],
+          'field_parentid' => 0,
     	));
     	$vol->save();
     }
+
+    // Sets the ID's, if no event created of that type sets to 0
+    $vid = 0;
+    $aid = 0;
+
+    if($vol) {
+      $vid = $vol->id();
+    }
+    if($att) {
+      $aid = $att->id();
+    }
+
+    // Save the parent event
+    $parent = ParentEvent::create([
+      'label' => $event_name,
+      'name' => $event_name,
+      'field_attendeeid' => $aid,
+      'field_volunteerid' => $vid
+    ]);
+    $parent->save();
+
+    // Edits the events to have the newly created parent event's id
+    if($vol) {
+      $vol->field_parentid = $parent->id();
+      $vol->save();
+    }
+
+    if($att) {
+      $att->field_parentid = $parent->id();
+      $att->save();
+    }
+
   	// Once we've saved and verified everything, we can redirect and set a success message!
     drupal_set_message($this->t('Successfully created event: @event', array('@event' => $event_name)));
     $url = '';
