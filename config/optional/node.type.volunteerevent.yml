@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+    enforced:
+        module:
+            - eventcreator
+    module:
+        - menu_ui
+third_party_settings:
+    menu_ui:
+        available_menus:
+            - main
+        parent: 'main:'
+_core:
+    default_config_hash: s44lJkS5djw7comyf75kwMm9eKyH1dS_1TTd3k6xSLk
+name: VolunteerEvent
+type: volunteerevent
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

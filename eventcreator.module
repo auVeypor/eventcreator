@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains eventcreator.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function eventcreator_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the eventcreator module.
+    case 'help.page.eventcreator':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Event Management Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

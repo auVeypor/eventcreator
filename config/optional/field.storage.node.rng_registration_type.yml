@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+    module:
+        - node
+        - rng
+_core:
+    default_config_hash: hVHTvJOSbxL212j_q9Ihyv5N3UMXZQqEl5LsC_n1XY4
+id: node.rng_registration_type
+field_name: rng_registration_type
+entity_type: node
+type: entity_reference
+settings:
+    target_type: registration_type
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
