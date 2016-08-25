@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.field_venue
         - node.type.volunteerevent
 _core:
-    default_config_hash: CuF9bmAcGRtBknHMy3E36bJzHDXUVrfGLp_LRKC5hLs
+    default_config_hash: ATuA77uV-bULvAhETA9N1bUFsYUNG0-83A7WY1Tgpyc
 id: node.volunteerevent.field_venue
 field_name: field_venue
 entity_type: node

@@ -21,7 +21,7 @@ dependencies:
         - text
         - user
 _core:
-    default_config_hash: tY6V6fE1409I5SGQHRTcAXu10BX7CK-K3vvtqkAIFT0
+    default_config_hash: bahwygmhj5mgaI2eaBDIhpszymG5UPdniA_xhQm7VUo
 id: node.volunteerevent.default
 targetEntityType: node
 bundle: volunteerevent
@@ -35,13 +35,6 @@ content:
         type: text_default
     field_status:
         weight: 107
-        label: above
-        settings:
-            link_to_entity: false
-        third_party_settings: {  }
-        type: string
-    field_status_int:
-        weight: 108
         label: above
         settings:
             link_to_entity: false
@@ -71,11 +64,11 @@ content:
             link_text: 'View larger map'
             zoom_level: '14'
             information_bubble: '1'
+            include_text: '1'
             map_type: m
             langcode: en
             include_static_map: 0
             include_link: 0
-            include_text: 0
         third_party_settings: {  }
         type: simple_gmap
     links:
@@ -84,6 +77,7 @@ content:
         third_party_settings: {  }
 hidden:
     field_original_date: true
+    field_status_int: true
     rng_capacity: true
     rng_registrants_duplicate: true
     rng_registration_groups: true

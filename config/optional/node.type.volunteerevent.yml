@@ -12,7 +12,7 @@ third_party_settings:
             - main
         parent: 'main:'
 _core:
-    default_config_hash: s44lJkS5djw7comyf75kwMm9eKyH1dS_1TTd3k6xSLk
+    default_config_hash: _XAMks_L36HWLF5p-uQkyjBwAPrPkNkurdsYXuOoADU
 name: VolunteerEvent
 type: volunteerevent
 description: ''

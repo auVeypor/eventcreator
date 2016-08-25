@@ -21,7 +21,7 @@ dependencies:
         - rng
         - unlimited_number
 _core:
-    default_config_hash: YNqG6yPt-LV4Pa8hiJFa3DDbzD6Yj1_mt7N5vFXmPbs
+    default_config_hash: si4w0ILDroEC04wqwnSuIfv8VSI0XhnL4PeoxfJ8ixM
 id: node.volunteerevent.rng_event
 targetEntityType: node
 bundle: volunteerevent

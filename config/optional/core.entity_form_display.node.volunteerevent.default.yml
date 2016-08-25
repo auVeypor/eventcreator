@@ -20,7 +20,7 @@ dependencies:
         - path
         - text
 _core:
-    default_config_hash: Wa85D0x60omX96kzYO9XemqC_lgEWezGUSPiszcWF7o
+    default_config_hash: ExyFF7ThsR2qaBnESOM8MKjjkNQHT6AK4rFww79zO0s
 id: node.volunteerevent.default
 targetEntityType: node
 bundle: volunteerevent

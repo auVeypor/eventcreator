@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.field_text_time
         - node.type.attendeeevent
 _core:
-    default_config_hash: q-xEpQbj9e9s0YxMqtUnDVVaPP1tVyXyqBL409VkiWY
+    default_config_hash: 8-aObIqd1JDEtHC412milBkkOsJUXMvCVf-85VHSAOc
 id: node.attendeeevent.field_text_time
 field_name: field_text_time
 entity_type: node

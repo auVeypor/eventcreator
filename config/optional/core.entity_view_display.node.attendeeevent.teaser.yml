@@ -20,7 +20,7 @@ dependencies:
     module:
         - user
 _core:
-    default_config_hash: q8KBx7UEP1ujxq_zpKkglkYSeKvOgENBrK2OmozoPHk
+    default_config_hash: Lf-gKr4L_EZjNXroQEGU-HZ7syYZ_bQMIUZFrCL6f2M
 id: node.attendeeevent.teaser
 targetEntityType: node
 bundle: attendeeevent

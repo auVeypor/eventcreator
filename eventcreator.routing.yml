@@ -23,13 +23,13 @@ eventcreator.view:
     _title: 'View Event'
     _controller: '\Drupal\eventcreator\Controller\EventViewController::content'
   requirements:
-    _permission: 'access content'
+    _permission: 'access content redirect views'
 
 # View for a single event (if specified by creator)
 eventcreator.view_single:
-   path: '/event/view/{id}'
-   defaults:
+  path: '/event/view/{id}'
+  defaults:
     _title: 'View Event'
     _controller: '\Drupal\eventcreator\Controller\EventViewController::content_single'
-requirements:
-    _permission: 'access content'
+  requirements:
+    _permission: 'access content redirect views'
