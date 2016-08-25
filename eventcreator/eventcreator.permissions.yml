@@ -17,3 +17,9 @@ view published parent event entities:
 
 view unpublished parent event entities:
   title: 'View unpublished Parent Event entities'
+
+access content add event nodes:
+  title: 'Access the event create form'
+
+access content edit event nodes:
+  title: 'Access the event edit form'

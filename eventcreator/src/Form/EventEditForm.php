@@ -200,16 +200,17 @@ class EventEditForm extends FormBase {
       $vol->save();
     }
 
+    global $base_url;
     // Once we've saved and verified everything, we can redirect and set a success message!
     drupal_set_message($this->t('Successfully edited event: @event', array('@event' => $event_name)));
-    $url = '';
+    $url = $base_url;
     
     if($att && !$vol) {
-      $url = 'view/' . $att->id();
+      $url = $url . '/event/view/' . $att->id();
     } else if($vol && !$att) {
-      $url = 'view/' . $vol->id();
+      $url = $url . '/event/view/' . $vol->id();
     } else if ($vol && $att) {
-      $url = 'view/' . $att->id() . '/' . $vol->id();
+      $url = $url . '/event/view/' . $att->id() . '/' . $vol->id();
     }
   
     $response = new RedirectResponse($url);
