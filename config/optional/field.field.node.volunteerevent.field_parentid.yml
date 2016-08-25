@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+    config:
+        - field.storage.node.field_parentid
+        - node.type.volunteerevent
+id: node.volunteerevent.field_parentid
+field_name: field_parentid
+entity_type: node
+bundle: volunteerevent
+label: ParentID
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+    min: null
+    max: null
+    prefix: ''
+    suffix: ''
+field_type: integer

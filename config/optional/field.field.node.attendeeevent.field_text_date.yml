@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.field_text_date
         - node.type.attendeeevent
 _core:
-    default_config_hash: _i2WqTPZqFEfRGxFEWWUMb31rlAVA15YKJQMJIyV3H4
+    default_config_hash: O6IIIynVz8lZ5_kBFNmK_FzKZmxhgOjvK2pNrIVPLjI
 id: node.attendeeevent.field_text_date
 field_name: field_text_date
 entity_type: node

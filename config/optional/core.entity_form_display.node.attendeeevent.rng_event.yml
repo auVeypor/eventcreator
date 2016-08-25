@@ -21,7 +21,7 @@ dependencies:
         - rng
         - unlimited_number
 _core:
-    default_config_hash: ffZ5cU526c2CzB1RmqZ-pi9lNut2raIeitjYiDGsX4c
+    default_config_hash: EUWT-5g92cbXocS0qaUifquiahw6_gxjqom0-q4LOok
 id: node.attendeeevent.rng_event
 targetEntityType: node
 bundle: attendeeevent

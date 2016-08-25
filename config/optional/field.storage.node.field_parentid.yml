@@ -3,10 +3,8 @@ status: true
 dependencies:
     module:
         - node
-_core:
-    default_config_hash: pkbswJ0olpKLiPLb7N3VnRnO16pw0SGA02nLLojOUpw
-id: node.rng_capacity
-field_name: rng_capacity
+id: node.field_parentid
+field_name: field_parentid
 entity_type: node
 type: integer
 settings:

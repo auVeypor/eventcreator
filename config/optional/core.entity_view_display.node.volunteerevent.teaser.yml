@@ -20,7 +20,7 @@ dependencies:
     module:
         - user
 _core:
-    default_config_hash: IFeolHKUrh38FnQf1HR2hgp4VsMb17q4fC_dmbMxZhE
+    default_config_hash: i8HpiqQiq8y7hArx9aT49zhrX0vuEsBUEWz1QZp3glc
 id: node.volunteerevent.teaser
 targetEntityType: node
 bundle: volunteerevent

@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.rng_registrants_duplicate
         - node.type.volunteerevent
 _core:
-    default_config_hash: fcdPO1jVWMR47Da3Gkci25qWgLZQtVu4ggXxWWADrF4
+    default_config_hash: ThPjOifIAUm4Kw-8MSZGT0kPltIpwXru0myKA1PxdCk
 id: node.volunteerevent.rng_registrants_duplicate
 field_name: rng_registrants_duplicate
 entity_type: node

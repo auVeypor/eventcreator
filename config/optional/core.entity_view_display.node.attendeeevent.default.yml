@@ -4,6 +4,7 @@ dependencies:
     config:
         - field.field.node.attendeeevent.field_description
         - field.field.node.attendeeevent.field_original_date
+        - field.field.node.attendeeevent.field_parentid
         - field.field.node.attendeeevent.field_status
         - field.field.node.attendeeevent.field_status_int
         - field.field.node.attendeeevent.field_text_date
@@ -21,7 +22,7 @@ dependencies:
         - text
         - user
 _core:
-    default_config_hash: q-tQOF33-rXS7pmlCrJ355SH_XBC4d_AOVFpU-Rm1nY
+    default_config_hash: D-1Yjz-msfxY-ow7zl-aeRFJQmf7DemFR5MLVqV9rsw
 id: node.attendeeevent.default
 targetEntityType: node
 bundle: attendeeevent
@@ -33,6 +34,14 @@ content:
         settings: {  }
         third_party_settings: {  }
         type: text_default
+    field_parentid:
+        weight: 110
+        label: above
+        settings:
+            thousand_separator: ''
+            prefix_suffix: true
+        third_party_settings: {  }
+        type: number_integer
     field_status:
         weight: 109
         label: above

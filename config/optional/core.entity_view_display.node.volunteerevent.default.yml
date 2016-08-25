@@ -4,6 +4,7 @@ dependencies:
     config:
         - field.field.node.volunteerevent.field_description
         - field.field.node.volunteerevent.field_original_date
+        - field.field.node.volunteerevent.field_parentid
         - field.field.node.volunteerevent.field_status
         - field.field.node.volunteerevent.field_status_int
         - field.field.node.volunteerevent.field_text_date
@@ -21,7 +22,7 @@ dependencies:
         - text
         - user
 _core:
-    default_config_hash: bahwygmhj5mgaI2eaBDIhpszymG5UPdniA_xhQm7VUo
+    default_config_hash: igJFI5JU7Qi9x5J82lmw5zxkr-NC0j4ru8yEG4T9bR8
 id: node.volunteerevent.default
 targetEntityType: node
 bundle: volunteerevent
@@ -33,6 +34,14 @@ content:
         settings: {  }
         third_party_settings: {  }
         type: text_default
+    field_parentid:
+        weight: 108
+        label: above
+        settings:
+            thousand_separator: ''
+            prefix_suffix: true
+        third_party_settings: {  }
+        type: number_integer
     field_status:
         weight: 107
         label: above

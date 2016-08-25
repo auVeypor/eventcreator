@@ -4,7 +4,7 @@ dependencies:
     module:
         - node
 _core:
-    default_config_hash: JaSi9oaaPaP0vclzL-JLcc3A49HyPbULZnLmqWMBNqI
+    default_config_hash: 5bkX37OyraNGtbyn8-wd1mvUEGCO2iuw2xfrvicidrE
 id: node.rng_status
 field_name: rng_status
 entity_type: node
