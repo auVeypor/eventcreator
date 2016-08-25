@@ -5,6 +5,7 @@ dependencies:
         - core.entity_view_mode.node.teaser
         - field.field.node.volunteerevent.field_description
         - field.field.node.volunteerevent.field_original_date
+        - field.field.node.volunteerevent.field_parentid
         - field.field.node.volunteerevent.field_status
         - field.field.node.volunteerevent.field_status_int
         - field.field.node.volunteerevent.field_text_date
@@ -31,6 +32,7 @@ content:
 hidden:
     field_description: true
     field_original_date: true
+    field_parentid: true
     field_status: true
     field_status_int: true
     field_text_date: true
