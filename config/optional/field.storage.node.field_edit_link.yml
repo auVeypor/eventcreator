@@ -2,15 +2,14 @@ langcode: en
 status: true
 dependencies:
     module:
+        - link
         - node
-_core:
-    default_config_hash: Ui5mMaRjprMgo5Xbuk37tfAhAoENQyfEmiHGhc_e-tw
-id: node.rng_reply_to
-field_name: rng_reply_to
+id: node.field_edit_link
+field_name: field_edit_link
 entity_type: node
-type: email
+type: link
 settings: {  }
-module: core
+module: link
 locked: false
 cardinality: 1
 translatable: true

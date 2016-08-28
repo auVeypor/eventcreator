@@ -12,7 +12,7 @@ third_party_settings:
             - main
         parent: 'main:'
 _core:
-    default_config_hash: Y0TWAC1W_2xxR-rbvD9q5rH8jXHc2p1pYf06Eecvi20
+    default_config_hash: yVR9dzw0oRvMvWipmXCfrgMreiNKlCfh_cAuusbj340
 name: AttendeeEvent
 type: attendeeevent
 description: ''

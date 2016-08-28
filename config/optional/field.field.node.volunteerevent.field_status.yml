@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.field_status
         - node.type.volunteerevent
 _core:
-    default_config_hash: 3bzrrWXI0dJ2eTQK7C5muwPJwWyG041WhHtEls-3PY8
+    default_config_hash: 66MAuU7lNWv1DXq3LwvfQ4D28aUmX27a_FCyUCOf5hU
 id: node.volunteerevent.field_status
 field_name: field_status
 entity_type: node

@@ -137,6 +137,7 @@ class EventCreateForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+    global $base_url;
   	// Grab the data from the form
     $status_strings = array("Going ahead", "Pending", "Cancelled");
   	$event_name = $form_state->getValue('event-name');
@@ -194,6 +195,7 @@ class EventCreateForm extends FormBase {
           'field_status_int' => $event_status,
           'field_status' => $status_strings[intval($event_status)-1],
           'field_parentid' => 0,
+          'field_edit_link' => "",
     	));
     	$att->save();
     }
@@ -212,6 +214,7 @@ class EventCreateForm extends FormBase {
           'field_status_int' => $event_status,
           'field_status' => $status_strings[intval($event_status)-1],
           'field_parentid' => 0,
+          'field_edit_link' => "",
     	));
     	$vol->save();
     }
@@ -239,11 +242,15 @@ class EventCreateForm extends FormBase {
     // Edits the events to have the newly created parent event's id
     if($vol) {
       $vol->field_parentid = $parent->id();
+      $vol->field_edit_link = $base_url . "/event/edit/" . $parent->id(); 
+      $vol->field_edit_link->title = "Edit Event";
       $vol->save();
     }
 
     if($att) {
       $att->field_parentid = $parent->id();
+      $att->field_edit_link = $base_url . "/event/edit/" . $parent->id(); 
+      $att->field_edit_link->title = "Edit Event";
       $att->save();
     }
 

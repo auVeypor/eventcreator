@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.rng_registration_groups
         - node.type.attendeeevent
 _core:
-    default_config_hash: X9JztUJDf_Y3S-pa2YYOk6xEsEHcyuaBu2tKOPkoOG8
+    default_config_hash: FLa0NK0BZLh0KYq-5WGywPwnEuvk4ft5sh4_vBKfvIQ
 id: node.attendeeevent.rng_registration_groups
 field_name: rng_registration_groups
 entity_type: node

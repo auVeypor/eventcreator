@@ -4,7 +4,7 @@ dependencies:
     module:
         - node
 _core:
-    default_config_hash: pkbswJ0olpKLiPLb7N3VnRnO16pw0SGA02nLLojOUpw
+    default_config_hash: HpPCJpESnAKvy5WD4Q4G3wCANaNl6_s7U-vvIDF_Pa8
 id: node.rng_capacity
 field_name: rng_capacity
 entity_type: node

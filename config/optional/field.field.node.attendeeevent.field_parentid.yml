@@ -4,6 +4,8 @@ dependencies:
     config:
         - field.storage.node.field_parentid
         - node.type.attendeeevent
+_core:
+    default_config_hash: AnLOFgV3aTU3tN83Av0U3dB00RKVuWB1uBC63fXA680
 id: node.attendeeevent.field_parentid
 field_name: field_parentid
 entity_type: node

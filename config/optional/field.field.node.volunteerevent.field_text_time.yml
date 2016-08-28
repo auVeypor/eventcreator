@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.field_text_time
         - node.type.volunteerevent
 _core:
-    default_config_hash: XBd6NGGTB6d7EJIAfDTUVmZ-jmy4-DNPIZzBMAwIcrg
+    default_config_hash: fVVmZNO1rm9Z1OHSrS50LnhBaaC6kRFjFP4CJqi6Em8
 id: node.volunteerevent.field_text_time
 field_name: field_text_time
 entity_type: node

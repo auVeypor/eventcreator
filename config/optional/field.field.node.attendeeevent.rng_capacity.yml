@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.rng_capacity
         - node.type.attendeeevent
 _core:
-    default_config_hash: jMvpjdMTIn-WWoNbtcokA5QCdS7XaJKNHCsNOJNr5qM
+    default_config_hash: ONcbT71Zb1GliAs3GOznn-hIivovQENfAx6kHeEMWnE
 id: node.attendeeevent.rng_capacity
 field_name: rng_capacity
 entity_type: node

@@ -3,6 +3,7 @@ status: true
 dependencies:
     config:
         - field.field.node.attendeeevent.field_description
+        - field.field.node.attendeeevent.field_edit_link
         - field.field.node.attendeeevent.field_original_date
         - field.field.node.attendeeevent.field_parentid
         - field.field.node.attendeeevent.field_status
@@ -18,10 +19,11 @@ dependencies:
         - field.field.node.attendeeevent.rng_status
         - node.type.attendeeevent
     module:
+        - link
         - path
         - text
 _core:
-    default_config_hash: 8BbSSfU_1o6diPTgGEPfO_M9MEoNkno2s1q0FniJxeA
+    default_config_hash: Xj1HGm1V0UwS88wbY2xLETvHrKsc9mvHiQ13lS2b-K4
 id: node.attendeeevent.default
 targetEntityType: node
 bundle: attendeeevent
@@ -39,6 +41,13 @@ content:
             placeholder: ''
         third_party_settings: {  }
         type: text_textfield
+    field_edit_link:
+        weight: 42
+        settings:
+            placeholder_url: ''
+            placeholder_title: ''
+        third_party_settings: {  }
+        type: link_default
     field_original_date:
         weight: 31
         settings:
