@@ -46,8 +46,8 @@ use Drupal\user\UserInterface;
  *   },
  *   links = {
  *     "canonical" = "/admin/structure/parent_event/{parent_event}",
- *     "add-form" = "/admin/structure/parent_event/add",
- *     "edit-form" = "/admin/structure/parent_event/{parent_event}/edit",
+ *     "add-form" = "/event/add",
+ *     "edit-form" = "/event/{parent_event}/edit",
  *     "delete-form" = "/admin/structure/parent_event/{parent_event}/delete",
  *     "collection" = "/admin/structure/parent_event",
  *   },
