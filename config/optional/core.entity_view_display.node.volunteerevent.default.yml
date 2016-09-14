@@ -3,7 +3,6 @@ status: true
 dependencies:
     config:
         - field.field.node.volunteerevent.field_description
-        - field.field.node.volunteerevent.field_edit_link
         - field.field.node.volunteerevent.field_original_date
         - field.field.node.volunteerevent.field_parentid
         - field.field.node.volunteerevent.field_status
@@ -19,12 +18,11 @@ dependencies:
         - field.field.node.volunteerevent.rng_status
         - node.type.volunteerevent
     module:
-        - link
         - simple_gmap
         - text
         - user
 _core:
-    default_config_hash: rjCzxj7bVoHOYtXpPLA-JVSzQGxKgjyrz1Z0mu3XWKI
+    default_config_hash: igJFI5JU7Qi9x5J82lmw5zxkr-NC0j4ru8yEG4T9bR8
 id: node.volunteerevent.default
 targetEntityType: node
 bundle: volunteerevent
@@ -36,17 +34,6 @@ content:
         settings: {  }
         third_party_settings: {  }
         type: text_default
-    field_edit_link:
-        weight: 108
-        label: above
-        settings:
-            trim_length: 80
-            url_only: false
-            url_plain: false
-            rel: ''
-            target: ''
-        third_party_settings: {  }
-        type: link
     field_status:
         weight: 107
         label: above

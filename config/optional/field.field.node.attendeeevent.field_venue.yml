@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.field_venue
         - node.type.attendeeevent
 _core:
-    default_config_hash: Pvd0uwU_EeukcECse_LBHK8ueb-LAHl-nhAvFPzcZ08
+    default_config_hash: iSl71sqN6mz7DM5MgX3LJ6lsITnb-UNzfSJ9091qH7U
 id: node.attendeeevent.field_venue
 field_name: field_venue
 entity_type: node

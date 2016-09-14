@@ -5,7 +5,7 @@ dependencies:
         - node
         - rng
 _core:
-    default_config_hash: 94pwiJZ4Cp9Bj0flwzGAHOA5lLwVs25Q6sHF3w8TVJk
+    default_config_hash: HE-ZHhliyvjeb3jvKd-peWzoKChCitAHFlldIYsNmMc
 id: node.rng_registration_type
 field_name: rng_registration_type
 entity_type: node

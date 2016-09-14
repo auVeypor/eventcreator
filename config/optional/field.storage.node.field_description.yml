@@ -5,13 +5,13 @@ dependencies:
         - node
         - text
 _core:
-    default_config_hash: or2hXFDzz44pU5nG2Ht59lmceRp5dQaXel8veMgbL5c
+    default_config_hash: Hffj1qEb8XKwlnnZUlU612MKV_usBWF-a2Z0Y64lEPw
 id: node.field_description
 field_name: field_description
 entity_type: node
 type: text
 settings:
-    max_length: 255
+    max_length: 2000
 module: text
 locked: false
 cardinality: 1

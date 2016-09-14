@@ -4,8 +4,6 @@ dependencies:
     config:
         - field.storage.node.field_parentid
         - node.type.volunteerevent
-_core:
-    default_config_hash: v7oBjfPDJhWrERNWGMRNCn2Z5CxzX3ENfodVSHiYn9A
 id: node.volunteerevent.field_parentid
 field_name: field_parentid
 entity_type: node

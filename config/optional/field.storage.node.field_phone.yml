@@ -3,16 +3,13 @@ status: true
 dependencies:
     module:
         - node
-_core:
-    default_config_hash: pkbswJ0olpKLiPLb7N3VnRnO16pw0SGA02nLLojOUpw
-id: node.rng_capacity
-field_name: rng_capacity
+        - telephone
+id: node.field_phone
+field_name: field_phone
 entity_type: node
-type: integer
-settings:
-    unsigned: false
-    size: normal
-module: core
+type: telephone
+settings: {  }
+module: telephone
 locked: false
 cardinality: 1
 translatable: true

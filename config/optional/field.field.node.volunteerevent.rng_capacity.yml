@@ -5,7 +5,7 @@ dependencies:
         - field.storage.node.rng_capacity
         - node.type.volunteerevent
 _core:
-    default_config_hash: LLCnsqhpCtCSVR_1sF-nNXnO_mHJ3JIMN4jHR2Wy5qQ
+    default_config_hash: aQP3_C945qKZNoK4VmSO8HsdNcgVXM1s3gt4vsk2nHw
 id: node.volunteerevent.rng_capacity
 field_name: rng_capacity
 entity_type: node

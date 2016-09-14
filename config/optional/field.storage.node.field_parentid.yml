@@ -3,8 +3,6 @@ status: true
 dependencies:
     module:
         - node
-_core:
-    default_config_hash: EYYeULlMkpk0V5WmfoAOab0gbaQ-x86Tt_JnfOoWPFs
 id: node.field_parentid
 field_name: field_parentid
 entity_type: node
