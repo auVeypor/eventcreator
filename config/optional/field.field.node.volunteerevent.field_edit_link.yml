@@ -1,11 +1,14 @@
+uuid: ff58a73d-edd3-4bd7-a609-32d7c7583422
 langcode: en
 status: true
 dependencies:
-    config:
-        - field.storage.node.field_edit_link
-        - node.type.volunteerevent
-    module:
-        - link
+  config:
+    - field.storage.node.field_edit_link
+    - node.type.volunteerevent
+  module:
+    - link
+_core:
+  default_config_hash: Fe-7G2g23R5PHh_iPk_pbOwaSPa5uVfAcfJNvEO43dU
 id: node.volunteerevent.field_edit_link
 field_name: field_edit_link
 entity_type: node
@@ -17,6 +20,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-    link_type: 17
-    title: 1
+  link_type: 17
+  title: 1
 field_type: link

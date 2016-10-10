@@ -3,45 +3,33 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.parent_event.parent_event.field_associated_assets
+    - field.field.parent_event.parent_event.field_attendee_event_link
     - field.field.parent_event.parent_event.field_attendeeid
+    - field.field.parent_event.parent_event.field_volunteer_event_link
     - field.field.parent_event.parent_event.field_volunteerid
   module:
     - eventcreator
+_core:
+  default_config_hash: '-iHm_11JdXko1Zg-ISH5zBMpJnqiyjVMP0rlIwWPAwc'
 id: parent_event.parent_event.default
 targetEntityType: parent_event
 bundle: parent_event
 mode: default
 content:
-  field_attendeeid:
-    weight: 12
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-  field_volunteerid:
-    weight: 11
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-  langcode:
-    type: language_select
+  field_associated_assets:
     weight: 10
-    settings: {  }
-    third_party_settings: {  }
-  name:
-    type: string_textfield
-    weight: -4
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  user_id:
-    type: entity_reference_autocomplete
-    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+    type: entity_reference_autocomplete
+hidden:
+  field_attendee_event_link: true
+  field_attendeeid: true
+  field_volunteer_event_link: true
+  field_volunteerid: true
+  langcode: true
+  name: true
+  user_id: true

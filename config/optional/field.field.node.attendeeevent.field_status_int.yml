@@ -1,11 +1,12 @@
+uuid: f1f5409d-935a-4e20-a740-3c814e4a32b6
 langcode: en
 status: true
 dependencies:
-    config:
-        - field.storage.node.field_status_int
-        - node.type.attendeeevent
+  config:
+    - field.storage.node.field_status_int
+    - node.type.attendeeevent
 _core:
-    default_config_hash: V8koaBL7FBqz_j_dC9aOBj3tw1yMrVdxsobF0bN7d4k
+  default_config_hash: 3GoJ5BL15Pkhqmn4L3JToveFwKutLms5rsdVbLAx9jM
 id: node.attendeeevent.field_status_int
 field_name: field_status_int
 entity_type: node

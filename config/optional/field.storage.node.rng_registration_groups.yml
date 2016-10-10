@@ -1,17 +1,18 @@
+uuid: ef22f2b7-739e-4199-b947-dfea0c7665e6
 langcode: en
 status: true
 dependencies:
-    module:
-        - node
-        - rng
+  module:
+    - node
+    - rng
 _core:
-    default_config_hash: HgcEUXhPfg6UVyrIT-pYUNljqn4UUE1wqMwKdR0_TbU
+  default_config_hash: v_XNKLieIUbpT_owsAelqmFxER_1v_3UOpqNy99HUwc
 id: node.rng_registration_groups
 field_name: rng_registration_groups
 entity_type: node
 type: entity_reference
 settings:
-    target_type: registration_group
+  target_type: registration_group
 module: core
 locked: false
 cardinality: -1

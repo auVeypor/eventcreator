@@ -1,11 +1,12 @@
+uuid: 54da4be8-487a-44b6-af96-8fa6eed589f6
 langcode: en
 status: true
 dependencies:
-    config:
-        - field.storage.node.field_text_time
-        - node.type.volunteerevent
+  config:
+    - field.storage.node.field_text_time
+    - node.type.volunteerevent
 _core:
-    default_config_hash: XBd6NGGTB6d7EJIAfDTUVmZ-jmy4-DNPIZzBMAwIcrg
+  default_config_hash: 5fglwiop4og3wv6hknTPCWxT7Hht7d77uwXbcTYFotI
 id: node.volunteerevent.field_text_time
 field_name: field_text_time
 entity_type: node

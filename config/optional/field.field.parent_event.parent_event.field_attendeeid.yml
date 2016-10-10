@@ -6,6 +6,8 @@ dependencies:
     - field.storage.parent_event.field_attendeeid
   module:
     - eventcreator
+_core:
+  default_config_hash: oK2n_mV3U7kxSWj6qYZzCvShuouQ6OcXz-4zUycMdVI
 id: parent_event.parent_event.field_attendeeid
 field_name: field_attendeeid
 entity_type: parent_event

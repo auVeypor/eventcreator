@@ -1,11 +1,12 @@
+uuid: ed4c4a8f-69c0-4337-8e69-327cf10a9802
 langcode: en
 status: true
 dependencies:
-    config:
-        - field.storage.node.rng_registration_type
-        - node.type.volunteerevent
+  config:
+    - field.storage.node.rng_registration_type
+    - node.type.volunteerevent
 _core:
-    default_config_hash: GUXVngHL8o1C2bhqEu_z-xHOAZsR2o2ddxTMXgfR9mo
+  default_config_hash: zPL9G7dJWurzXwPsGhoa-fL7YeQFAKebnMlXKcRTtnU
 id: node.volunteerevent.rng_registration_type
 field_name: rng_registration_type
 entity_type: node
@@ -17,6 +18,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-    handler: 'default:registration_type'
-    handler_settings: {  }
+  handler: 'default:registration_type'
+  handler_settings: {  }
 field_type: entity_reference

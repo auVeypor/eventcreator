@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - eventcreator
+_core:
+  default_config_hash: 0r1z0g1Q7JDpG9zvf5JkLUUNwKwi0Mt6qHBOan-TfY0
 id: parent_event.field_attendeeid
 field_name: field_attendeeid
 entity_type: parent_event

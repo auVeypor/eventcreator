@@ -9,6 +9,7 @@ use Drupal\node\Entity\Node;
 use Drupal\Core\Datetime\DrupalDateTime;
 use Drupal\Core\Form\FormBase;
 use Drupal\eventcreator\Entity\ParentEvent;
+use Drupal\assetmanage\Entity\Asset;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 /**
@@ -62,6 +63,7 @@ class ParentEventForm extends ContentEntityForm {
       $form['event-date-att'] = array(
         '#type' => 'datetime',
         '#title' => $this->t('Attendee Date'),
+        "#default_value" => new DrupalDateTime(date('o-m-d H:i:s')),
         '#states' => array(
           'visible' => array(
             ':input[name="checkAtt"]' => array('checked' => TRUE),
@@ -98,6 +100,7 @@ class ParentEventForm extends ContentEntityForm {
       $form['event-date-vol'] = array(
         '#type' => 'datetime',
         '#title' => $this->t('Volunteer Date'),
+        "#default_value" => new DrupalDateTime(date('o-m-d H:i:s')),
         '#states' => array(
           'visible' => array(
             ':input[name="checkVol"]' => array('checked' => TRUE),
@@ -252,7 +255,7 @@ class ParentEventForm extends ContentEntityForm {
    * {@inheritdoc}
    */
   public function save(array $form, FormStateInterface $form_state) {
-    $entity = $this->entity;
+    $entity = $this->entity; 
     $status = parent::save($form, $form_state);
     global $base_url;
 
@@ -362,17 +365,27 @@ class ParentEventForm extends ContentEntityForm {
       // Edits the events to have the newly created parent event's id
       if($vol) {
         $vol->field_parentid = $entity->id();
-        $vol->field_edit_link = $base_url . "/event/edit/" . $entity->id(); 
+        $vol->field_edit_link = $base_url . "/event/" . $entity->id() . "/edit/"; 
         $vol->field_edit_link->title = "Edit Event";
+        $vol->field_assetlink = $base_url . "/event/" . $entity->id() . "/assetlist/"; 
+        $vol->field_assetlink->title = "View Asset List";
         $vol->save();
+        $entity->field_volunteer_event_link = $base_url . "/node/" . $vid;
+        $entity->field_volunteer_event_link->title = "View Volunteer Event";
       }
 
       if($att) {
         $att->field_parentid = $entity->id();
-        $att->field_edit_link = $base_url . "/event/edit/" . $entity->id(); 
+        $att->field_edit_link = $base_url . "/event/" . $entity->id() . "/edit/"; 
         $att->field_edit_link->title = "Edit Event";
+        $att->field_assetlink = $base_url . "/event/" . $entity->id() . "/assetlist/"; 
+        $att->field_assetlink->title = "View Asset List";
         $att->save();
+        $entity->field_attendee_event_link = $base_url . "/node/" . $aid;
+        $entity->field_attendee_event_link->title = "View Attendee Event";
       }
+
+      $entity->save();
 
       // Once we've saved and verified everything, we can redirect and set a success message!
       drupal_set_message($this->t('Successfully created event: @event', array('@event' => $event_name)));
@@ -437,6 +450,8 @@ class ParentEventForm extends ContentEntityForm {
         $vol->field_status_int = $event_status;
         $vol->save();
       }
+      
+      $entity->save();
 
       global $base_url;
       // Once we've saved and verified everything, we can redirect and set a success message!

@@ -6,6 +6,8 @@ dependencies:
     - field.storage.parent_event.field_volunteerid
   module:
     - eventcreator
+_core:
+  default_config_hash: zhU2puONAtnwUnV3MdDIWid7M9NqyKmCXzdfNGkFOhg
 id: parent_event.parent_event.field_volunteerid
 field_name: field_volunteerid
 entity_type: parent_event

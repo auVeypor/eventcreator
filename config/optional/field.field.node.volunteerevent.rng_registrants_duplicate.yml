@@ -1,11 +1,12 @@
+uuid: e12d49eb-3474-4270-8a6b-bdf015105027
 langcode: en
 status: true
 dependencies:
-    config:
-        - field.storage.node.rng_registrants_duplicate
-        - node.type.volunteerevent
+  config:
+    - field.storage.node.rng_registrants_duplicate
+    - node.type.volunteerevent
 _core:
-    default_config_hash: ThPjOifIAUm4Kw-8MSZGT0kPltIpwXru0myKA1PxdCk
+  default_config_hash: tpdCukf4oArJNsvwvkU0p5s-6yF0RohpECJFlJUPxr8
 id: node.volunteerevent.rng_registrants_duplicate
 field_name: rng_registrants_duplicate
 entity_type: node
@@ -17,6 +18,6 @@ translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-    on_label: 'Allow duplicate registrants for this event'
-    off_label: 'Do not allow duplicate registrants for this event'
+  on_label: 'Allow duplicate registrants for this event'
+  off_label: 'Do not allow duplicate registrants for this event'
 field_type: boolean

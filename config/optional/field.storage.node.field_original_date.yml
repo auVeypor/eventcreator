@@ -1,18 +1,19 @@
+uuid: e8a195e4-3a91-4433-bd84-6accd45e9bb8
 langcode: en
 status: true
 dependencies:
-    module:
-        - node
+  module:
+    - node
 _core:
-    default_config_hash: vUCm5EY9HyyL2o5VDr6F3ooo8aK7WyfWWYmHM8n9JSA
+  default_config_hash: hq1whZ6Xl1XJvSDeHt6oUi2fa1qdI5Qmw3_bLY23OBA
 id: node.field_original_date
 field_name: field_original_date
 entity_type: node
 type: string
 settings:
-    max_length: 255
-    is_ascii: false
-    case_sensitive: false
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

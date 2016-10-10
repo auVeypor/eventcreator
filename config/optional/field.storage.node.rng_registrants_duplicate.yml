@@ -1,10 +1,11 @@
+uuid: c9c9be89-2394-4c7f-b2f0-39c5a509fc30
 langcode: en
 status: true
 dependencies:
-    module:
-        - node
+  module:
+    - node
 _core:
-    default_config_hash: M11iD64TaSKvH2_Otz8TcXouIL7YIyFGpwjL-7MUTKM
+  default_config_hash: '-yboCVSL91XHu1S8Pp_biAp5l1p-unI5p_3GI2fdqYM'
 id: node.rng_registrants_duplicate
 field_name: rng_registrants_duplicate
 entity_type: node
