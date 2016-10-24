@@ -26,3 +26,22 @@ access content edit event nodes:
 
 access content redirect views:
   title: 'Access the redirection views'
+add anonreg entities:
+  title: 'Create new Anonreg entities'
+
+administer anonreg entities:
+  title: 'Administer Anonreg entities'
+  description: 'Allow to access the administration form to configure Anonreg entities.'
+  restrict access: true
+
+delete anonreg entities:
+  title: 'Delete Anonreg entities'
+
+edit anonreg entities:
+  title: 'Edit Anonreg entities'
+
+view published anonreg entities:
+  title: 'View published Anonreg entities'
+
+view unpublished anonreg entities:
+  title: 'View unpublished Anonreg entities'

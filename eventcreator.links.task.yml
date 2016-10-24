@@ -19,3 +19,24 @@ entity.parent_event.delete_form:
   title: Delete
   weight: 10
 
+# Anonreg routing definition
+anonreg.settings_tab:
+  route_name: anonreg.settings
+  title: 'Settings'
+  base_route: anonreg.settings
+entity.anonreg.canonical:
+  route_name: entity.anonreg.canonical
+  base_route: entity.anonreg.canonical
+  title: 'View'
+
+entity.anonreg.edit_form:
+  route_name: entity.anonreg.edit_form
+  base_route: entity.anonreg.canonical
+  title: Edit
+
+entity.anonreg.delete_form:
+  route_name:  entity.anonreg.delete_form
+  base_route:  entity.anonreg.canonical
+  title: Delete
+  weight: 10
+
